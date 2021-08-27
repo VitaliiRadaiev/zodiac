@@ -1,0 +1,20 @@
+$startColor: rgb(66, 39, 185);
+$endColor: #fff;
+
+
+._puls-decor {
+    background: $startColor;
+    border-radius: 50%;
+    animation: pulsAnim 0.7s ease-out forwards;
+}
+
+@keyframes pulsAnim {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+        background: $endColor;
+        opacity: 0;
+    }
+}
