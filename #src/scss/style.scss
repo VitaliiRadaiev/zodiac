@@ -353,9 +353,68 @@ button.btn-default {
 	height: 600px;
 	border-radius: 60px;
 	position: relative;
-	margin: 0 auto 100px;
-	overflow: hidden;
+	margin: 100px auto 100px;
 	margin-bottom: 500px;
+	&:before {
+		position: absolute;
+		content: '';
+		display: block;
+		z-index: 4;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		box-shadow: -70px -70px #fff;
+		border-radius: 60px;
+	}
+
+	&:after {
+		position: absolute;
+		content: '';
+		display: block;
+		z-index: 5;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 120%;
+		box-shadow: 70px -70px #fff;
+		border-radius: 60px;
+	}
+
+	& > span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 6;
+
+		&:before {
+			position: absolute;
+			content: '';
+			display: block;
+			z-index: 4;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			box-shadow: -70px 70px #fff;
+			border-radius: 60px;
+		}
+	
+		&:after {
+			position: absolute;
+			content: '';
+			display: block;
+			z-index: 5;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 120%;
+			box-shadow: 70px 70px #fff;
+			border-radius: 60px;
+		}
+	}
 }
 @keyframes gradient {
     0% {
@@ -371,9 +430,9 @@ button.btn-default {
 .bg-test {
 	width: 100%;
 	height: 100%;
+	border-radius: 60px;
 	position: relative;
 	overflow: hidden;
-	margin: 0 auto 100px;
 	font-size: 62px;
 }
 
@@ -389,26 +448,14 @@ button.btn-default {
 	text-shadow: $text-shadow;
   }
   
-//   html {
-// 	font: 5vmin/1.3 Serif;
-// 	overflow: hidden;
-// 	background: #123;
-//   }
-  
-//   body, head {
-// 	display: block;
-// 	font-size: 52px;
-// 	color: transparent;
-//   }
-
 
   
  .bg-test::before, .bg-test::after {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 4em;
-	height: 5em;
+	width: 3em;
+	height: 3em;
 	content: '☁';
 	mix-blend-mode: screen;
 	animation: 44s -27s move infinite ease-in-out alternate;
