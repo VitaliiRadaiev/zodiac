@@ -1192,6 +1192,10 @@ textarea {
   position: relative;
   margin-top: 100px;
   margin-bottom: 100px;
+  opacity: 0;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .diagram svg {
@@ -1872,11 +1876,16 @@ textarea {
   cursor: pointer;
 }
 
+.diagram._active {
+  opacity: 1;
+}
+
 .diagram__tooltip {
   position: absolute;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  opacity: 0;
   z-index: 30;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

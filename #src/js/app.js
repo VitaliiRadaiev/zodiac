@@ -28,7 +28,7 @@ window.addEventListener('load', function () {
 	@@include('../common/burger/burger.js');
 	@@include('../common/checkbox/checkbox.js');
 	@@include('../common/diagram/diagram.js');
-	//@@includ e('../common/popup/popup.js');
+	@@include('files/scrollAnimation.js');
 	
 });
 

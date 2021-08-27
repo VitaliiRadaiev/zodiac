@@ -40,6 +40,7 @@
             return tooltip;
         }
         const setPositionTooltip = (tooltip, x, y) => {
+            tooltip.style.opacity = 1;
             tooltip.style.left = x + '%';
             tooltip.style.top = y + '%';
         }
