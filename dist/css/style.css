@@ -3002,8 +3002,8 @@ textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 2em;
-  height: 2em;
+  width: 4em;
+  height: 4em;
   content: "☁";
   mix-blend-mode: screen;
   -webkit-animation: 44s -27s move infinite ease-in-out alternate;
@@ -3012,7 +3012,7 @@ textarea {
 }
 
 .anime-bg-box__bg-l:before {
-  text-shadow: 2.3082899572em 0.9708833096em 7px rgba(174, 0, 255, 0.9), 2.4351736012em 0.1120704546em 7px rgba(255, 92, 0, 0.9), 0.5326574046em 2.3804899341em 7px rgba(0, 255, 183, 0.9), 2.2895508076em -0.1865300435em 7px rgba(255, 163, 0, 0.9), -0.4535545081em 0.1298442517em 7px rgba(255, 25, 0, 0.9), 0.0041594876em 0.1109943769em 7px rgba(255, 0, 144, 0.9), 1.1673038123em 1.5244601146em 7px rgba(0, 255, 254, 0.9), 2.2089564336em 0.2997606502em 7px rgba(0, 23, 255, 0.9);
+  text-shadow: 0.9917220645em 0.9699805546em 7px rgba(127, 0, 255, 0.9), 2.3421323971em -0.4401862801em 7px rgba(255, 0, 214, 0.9), 0.0790213016em 0.6724313031em 7px rgba(255, 0, 28, 0.9), 0.0868024866em 0.6909396679em 7px rgba(255, 0, 60, 0.9), -0.0581358514em 1.810357243em 7px rgba(0, 128, 255, 0.9), 2.0185411665em 0.2842074651em 7px rgba(0, 255, 97, 0.9), 1.062887659em 1.3626802068em 7px rgba(0, 255, 250, 0.9), 1.5903503872em 2.3252777704em 7px rgba(0, 144, 255, 0.9);
   -webkit-animation-duration: 42s;
           animation-duration: 42s;
   -webkit-animation-delay: -23s;
@@ -3020,7 +3020,7 @@ textarea {
 }
 
 .anime-bg-box__bg-l:after {
-  text-shadow: 1.0594286879em 0.9402348656em 7px rgba(255, 0, 191, 0.9), 0.4284480221em 1.5446375626em 7px rgba(64, 255, 0, 0.9), -0.2215967359em 0.6307632585em 7px rgba(255, 234, 0, 0.9), 2.2227106156em 0.5895102893em 7px rgba(80, 255, 0, 0.9), 2.2489319838em -0.2675970513em 7px rgba(255, 0, 228, 0.9), 0.6361811165em 0.053374977em 7px rgba(0, 255, 151, 0.9), 0.7985844081em 2.4186922221em 7px rgba(255, 0, 199, 0.9), 1.7166585697em 2.1785068924em 7px rgba(255, 0, 145, 0.9);
+  text-shadow: 0.5338129472em -0.3795228044em 7px rgba(255, 89, 0, 0.9), -0.3473722799em 2.0631560739em 7px rgba(0, 28, 255, 0.9), 2.1908080333em 0.0178549658em 7px rgba(0, 255, 45, 0.9), 0.5898488209em 1.2838086847em 7px rgba(0, 255, 251, 0.9), 0.202938984em 1.0414647262em 7px rgba(255, 231, 0, 0.9), 0.9983190973em 0.9067925682em 7px rgba(0, 255, 182, 0.9), -0.3978546815em 2.4232339297em 7px rgba(255, 152, 0, 0.9), 0.3329813442em 1.857391927em 7px rgba(255, 255, 0, 0.9);
   -webkit-animation-duration: 41s;
           animation-duration: 41s;
   -webkit-animation-delay: -19s;
