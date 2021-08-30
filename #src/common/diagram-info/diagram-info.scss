@@ -1,0 +1,97 @@
+.diagram-info {
+    margin-bottom: 50px;
+    &__body {
+        padding: 0px 100px;
+        
+        @media (min-width: 992px) {
+            display: flex;
+
+        }
+
+        @media (max-width: 1399.98px) {
+            padding: 0px 32.5px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding: 0px 15px;
+        }
+    }
+
+    &__col-1 {
+        margin-bottom: 50px;
+
+        @media (min-width: 992px) {
+            flex: 0 0 49%;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+    }
+
+    &__col-2 {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    & .single-zodiac-info-card__text {
+        max-height: none;
+        margin-bottom: 100px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 50px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    & .compatibility-block__info-box-list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 438px;
+
+        & > li {
+            padding-right: 20px;
+            flex: 0 1 50%;
+        }
+    }
+}
+
+
+.diagram-info-slider {
+    & .swiper-wrapper {
+        margin-bottom: 50px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 25px;
+        }
+    }
+    & .swiper-pagination {
+        position: static;
+        display: flex;
+
+        & .swiper-pagination-bullet {
+            margin: 0;
+            opacity: 1;
+            height: 10px;
+            border-radius: 30px;
+            flex: 1 1 auto;
+            &:not(:last-child) {
+                margin-right: 16px;
+
+                @media (max-width: $md3+px) {
+                    margin-right: 8px;
+                }
+            }
+
+
+            &:not(.swiper-pagination-bullet-active) {
+                background-color: #F4F3F7 !important;
+            }
+        }
+    }
+}

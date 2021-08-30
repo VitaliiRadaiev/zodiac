@@ -2,17 +2,64 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>New Project</title>
+	<title>Zodiacs</title>
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
-	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
 	
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="js/vendors.js"></script>
 <script src="js/app.js"></script>
 <!-- <script
@@ -21,116 +68,2842 @@ defer
 ></script> -->
 </head>
 
-<body style="min-height: 3000px; padding-top: 100px;">
+<body>
 	<div class="_preload-body"></div>
 	<!-- == TOP LINE ================== -->
-	<!-- <header class="header">
-    <div class="header__body container">
-        <div class="header__logo logo">
-            <a href="#">
-                <img src="" alt="logo">
-            </a>
-        </div>
-        <nav class="header__menu menu">
-            <ul class="menu__list">
-                <li class="menu-item-has-children">
-                    <a href="#" class="menu__link current-menu-item"></a>
+	<header class="header">
+    <div class="container">
+        <div class="header__body">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="logo">
+                </a>
+            </div>
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li>
+                        <a href="#" class="menu__link">
+                            <img src="img/icons/header-icon-1.svg" alt="">
+                            Совместимость по знакам
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">
+                            <img src="img/icons/header-icon-2.svg" alt="">
+                            Совместимость по дате
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">
+                            <img src="img/icons/header-icon-3.svg" alt="">
+                            Знаки зодиака
+                        </a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#" class="menu__link children-item current-menu-item">
+                            <img src="img/icons/header-icon-4.svg" alt="">
+                            Совместимость по гороскопу
+                        </a>
+                        <div class="sub-menu-wrap">
+                            <ul class="sub-menu" data-scroll>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Lorem, ipsum dolor.</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Rado</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Longines</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Tissot</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Balmain</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Certina</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Calvin Klein</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Omega</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Rado</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Longines</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Tissot</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Balmain</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Certina</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Calvin Klein</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <form class="header__search">
+                <div class="header__search-wrap">
+                    <input type="text" class="header__search-input" placeholder="Поиск по сайту">
+                    <button type="submit" class="header__search-submit">
+                        <img src="img/icons/search.svg" alt="">
+                    </button>
+                </div>
+            </form>
+            <div class="header__search-mobile-trigger">
+                <img src="img/icons/search.svg" alt="">
+            </div>
+            <div class="header__language">
+                <div class="header__language-title children-item">
+                    <img src="img/icons/flag-ru.svg" alt="">
+                    Rus
+                </div>
+                <div class="sub-menu-wrap">
                     <ul class="sub-menu">
                         <li>
-                            <a class="sub-menu__link" href="#">Omega</a>
+                            <a class="sub-menu__link" href="#"><img src="img/icons/flag-pl.svg" alt="">Pl</a>
                         </li>
                         <li>
-                            <a class="sub-menu__link" href="#">Rado</a>
-                        </li>
-                        <li>
-                            <a class="sub-menu__link" href="#">Longines</a>
-                        </li>
-                        <li>
-                            <a class="sub-menu__link" href="#">Tissot</a>
-                        </li>
-                        <li>
-                            <a class="sub-menu__link" href="#">Balmain</a>
-                        </li>
-                        <li>
-                            <a class="sub-menu__link" href="#">Certina</a>
-                        </li>
-                        <li>
-                            <a class="sub-menu__link" href="#">Calvin Klein</a>
+                            <a class="sub-menu__link" href="#"><img src="img/icons/flag-uk.svg" alt="">En</a>
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="#" class="menu__link"></a>
-                </li>
-                <li>
-                    <a href="#" class="menu__link"></a>
-                </li>
-            </ul>
-        </nav>
-        <div class="header__burger">
-            <div class="burger-wrap">
-                <div class="burger" data-activEl="menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </div>
             </div>
-        </div> 
+            <div class="header__burger">
+                <div class="burger-wrap">
+                    <div class="burger" data-activEl="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</header> -->
-
+</header>
 	<!-- == // TOP LINE ================== -->
 
 
-	<main class="_page home-page">
-		<div class="bg-test-wrap">
-			<span></span>
-			<div class="bg-test"></div>
-		</div>
-		<div class="diagram _anim-no-hide" data-diagram-values="9,10,10,8,10,10,2,4"
-			data-diagram-colors="#FFCF65,#60C6FF,#FF856A,#7297FF,#6FCF97,#B592FF,#ED9CEF,#2F80ED"
-			data-diagram-text="Общительность,Влюбчивость,Доброта,Здоровье,Успешность,Самоотдача,Терпимость,Ревнивость">
+	<main class="_page home-page _padding-top">
+		<section class="h-bann">
+			<div class="container">
+				<div class="anime-bg-box">
+					<div class="anime-bg-box__bg">
+						<span></span>
+						<div class="anime-bg-box__bg-l"></div>
+					</div>
+					<div class="anime-bg-box__body h-bann__body">
+						<div class="h-bann__head">
+							<h1 class="h-bann__title title-1">Таблица совместимости знаков зодиака</h1>
+							<div class="user-label">
+								<div class="user-label__photo">
+									<div class="user-label__is-activity" style="background-color: #87C259;"></div>
+									<div class="user-label__photo-wrap ibg">
+										<img src="img/photo/user-photo.jpg" alt="">
+									</div>
+								</div>
+								<div class="user-label__text-wrap">
+									<div class="user-label__name">Esther Howard</div>
+									<div class="user-label__position">Астролог, автор статьи</div>
+								</div>
+								<a href="#" class="user-label__send-btn">
+									<img class="img-svg" src="img/icons/send.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<form action="#" class="h-filter h-form">
+							<div class="h-filter__col h-filter__col-1 h-form__item">
 
-		</div>
-		<div class="diagram _anim-no-hide" data-diagram-values="9,6,10,8,2,10,2,4"
-			data-diagram-colors="#FFCF65,#60C6FF,#FF856A,#7297FF,#6FCF97,#B592FF,#ED9CEF,#2F80ED"
-			data-diagram-text="Общительность,Влюбчивость,Доброта,Здоровье,Успешность,Самоотдача,Терпимость,Ревнивость">
+								<div class="h-form__label">Мужчина</div>
+								<div class="select-wrap">
+									<select name="" class="_select">
+										<option value="1" data-img-url="img/icons/oven.svg" selected>Овет</option>
+										<option value="2" data-img-url="img/icons/bliznecy.svg">Телец</option>
+										<option value="3" data-img-url="img/icons/oven.svg">Близнецы</option>
+										<option value="4" data-img-url="img/icons/oven.svg">Рак</option>
+										<option value="5" data-img-url="img/icons/bliznecy.svg">Лев</option>
+										<option value="6" data-img-url="img/icons/oven.svg">Дева</option>
+										<option value="7" data-img-url="img/icons/oven.svg">Весы</option>
+										<option value="8" data-img-url="img/icons/bliznecy.svg">Скорпион</option>
+										<option value="9" data-img-url="img/icons/oven.svg">Стрелец</option>
+										<option value="10" data-img-url="img/icons/oven.svg">Козерог</option>
+										<option value="11" data-img-url="img/icons/bliznecy.svg">Водолей</option>
+										<option value="12" data-img-url="img/icons/oven.svg">Рыбы</option>
+									</select>
+								</div>
 
-		</div>
-		<div class="diagram _anim-no-hide" data-diagram-values="10,10,10,10,10,10,10,10"
-			data-diagram-colors="#FFCF65,#60C6FF,#FF856A,#7297FF,#6FCF97,#B592FF,#ED9CEF,#2F80ED"
-			data-diagram-text="Общительность,Влюбчивость,Доброта,Здоровье,Успешность,Самоотдача,Терпимость,Ревнивость">
+							</div>
+							<div class="h-filter__col h-filter__col-2 h-form__item">
 
-		</div>
+								<div class="h-form__label">Женщина</div>
+								<div class="select-wrap">
+									<select name="" class="_select">
+										<option value="1" data-img-url="img/icons/oven.svg" selected>Овет</option>
+										<option value="2" data-img-url="img/icons/bliznecy.svg">Телец</option>
+										<option value="3" data-img-url="img/icons/oven.svg">Близнецы</option>
+										<option value="4" data-img-url="img/icons/oven.svg">Рак</option>
+										<option value="5" data-img-url="img/icons/bliznecy.svg">Лев</option>
+										<option value="6" data-img-url="img/icons/oven.svg">Дева</option>
+										<option value="7" data-img-url="img/icons/oven.svg">Весы</option>
+										<option value="8" data-img-url="img/icons/bliznecy.svg">Скорпион</option>
+										<option value="9" data-img-url="img/icons/oven.svg">Стрелец</option>
+										<option value="10" data-img-url="img/icons/oven.svg">Козерог</option>
+										<option value="11" data-img-url="img/icons/bliznecy.svg">Водолей</option>
+										<option value="12" data-img-url="img/icons/oven.svg">Рыбы</option>
+									</select>
+								</div>
 
-	
+							</div>
+							<div class="h-filter__col h-filter__col-3 h-form__item">
+
+								<div class="h-form__label">Цель</div>
+								<div class="select-wrap">
+									<select name="" class="_select">
+										<option value="1" data-img-url="img/icons/heart.svg" selected>Любовь</option>
+										<option value="2" data-img-url="img/icons/oven.svg">Дружба</option>
+										<option value="3" data-img-url="img/icons/oven.svg">Секс</option>
+										<option value="3" data-img-url="img/icons/oven.svg">Работа</option>
+									</select>
+								</div>
+
+							</div>
+							<div class="h-filter__col h-filter__col-4 h-form__item">
+
+								<button type="submit" class="h-form__submit btn-default"><span>Узнать совместимость</span></button>
+							</div>
+						</form>
+						<div class="h-bann__text">
+							На нашем сайты собраны актуальные совместимости знаков зодиака для мужчин и женщин он
+							профессионального астролога Евгении Козловской. Здесь вы найдете совместимости в процентном
+							соотношении с подробным описанием. Выбирайте нужный вам знак зодиака и жмите на поиск
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="compatibility-block">
+			<div class="container">
+				<div class="compatibility-block__body">
+					<div class="compatibility-block__border" style="border-color: #FF915A;"></div>
+					<div class="compatibility-block__col-1">
+						<div class="compatibility-block__info-box">
+							<h2 class="compatibility-block__info-box-title title-2" style="color: #FF915A;">
+								Таблица совместимости знаков зодиака в любви
+							</h2>
+							<div class="compatibility-block__info-box-text">
+								По этой таблице вы сможете оценить шансы на построения амурных дел с вашим избранником.
+								С кем имеет смысл вступать в отношения, а кого лучше избегать. Для более детального
+								анализа воспользуйтесь кнопкой «Узнать совместимость» вверху страницы. Эта таблица
+								отражает лишь общие тенденции, а в сердечных делах всегда важны детали.
+							</div>
+							<ul class="compatibility-block__info-box-list">
+								<li>
+									<div class="dot" style="background-color: #AADF80;"></div>
+									Хорошая совместимость (71-100 %)
+								</li>
+								<li>
+									<div class="dot" style="background-color: #83ACE9;"></div>
+									Нормальная совместимость (41-70 %)
+
+								</li>
+								<li>
+									<div class="dot" style="background-color: #FF5C7C;"></div>
+									Плохая совместимость (0-40 %)
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="compatibility-block__col-2">
+						<div class="compatibility-table">
+							<div class="compatibility-table__left-col">
+								<div>
+									Овен
+								</div>
+								<div>
+									Телец
+								</div>
+								<div>
+									Близнецы
+								</div>
+								<div>
+									Рак
+								</div>
+								<div>
+									Лев
+								</div>
+								<div>
+									Дева
+								</div>
+								<div>
+									Скорпион
+								</div>
+								<div>
+									Змееносец
+								</div>
+								<div>
+									Стрелец
+								</div>
+								<div>
+									Козерог
+								</div>
+								<div>
+									Водолей
+								</div>
+								<div>
+									Рыбы
+								</div>
+							</div>
+							<div class="table-wrap">
+								<!-- green #AADF80 -->
+								<!-- blue #83ACE9 -->
+								<!-- red #FF554D -->
+								<table>
+									<tr>
+										<th>
+											<a href="#">Овен</a>
+										</th>
+										<th>
+											<a href="#">Телец</a>
+										</th>
+										<th>
+											<a href="#">Близнецы</a>
+										</th>
+										<th>
+											<a href="#">Рак</a>
+										</th>
+										<th>
+											<a href="#">Лев</a>
+										</th>
+										<th>
+											<a href="#">Дева</a>
+										</th>
+										<th>
+											<a href="#">Скорпион</a>
+										</th>
+										<th>
+											<a href="#">Змееносец</a>
+										</th>
+										<th>
+											<a href="#">Стрелец</a>
+										</th>
+										<th>
+											<a href="#">Козерог</a>
+										</th>
+										<th>
+											<a href="#">Водолей</a>
+										</th>
+										<th>
+											<a href="#">Рыбы</a>
+										</th>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="compatibility-block">
+			<div class="container">
+				<div class="compatibility-block__body">
+					<div class="compatibility-block__border" style="border-color: #87C259;"></div>
+					<div class="compatibility-block__col-1">
+						<div class="compatibility-block__info-box">
+							<h2 class="compatibility-block__info-box-title title-2" style="color: #87C259;">
+								Таблица совместимости знаков зодиака в дружбе
+							</h2>
+							<div class="compatibility-block__info-box-text">
+								Как понять, сложится ли крепкая дружба с тем или иным человеком? Почему отношения не клеятся? Стоит ожидать от друга подлости или ему можно доверять? В таблице вы сможете понять общую тенденцию по дружеским отношением. При более детальном поиске вы окончательно разберетесь, насколько крепка ваша дружба и что сделать, чтобы ее усилить.
+							</div>
+							<ul class="compatibility-block__info-box-list">
+								<li>
+									<div class="dot" style="background-color: #AADF80;"></div>
+									Хорошая совместимость (71-100 %)
+								</li>
+								<li>
+									<div class="dot" style="background-color: #83ACE9;"></div>
+									Нормальная совместимость (41-70 %)
+
+								</li>
+								<li>
+									<div class="dot" style="background-color: #FF5C7C;"></div>
+									Плохая совместимость (0-40 %)
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="compatibility-block__col-2">
+						<div class="compatibility-table">
+							<div class="compatibility-table__left-col">
+								<div>
+									Овен
+								</div>
+								<div>
+									Телец
+								</div>
+								<div>
+									Близнецы
+								</div>
+								<div>
+									Рак
+								</div>
+								<div>
+									Лев
+								</div>
+								<div>
+									Дева
+								</div>
+								<div>
+									Скорпион
+								</div>
+								<div>
+									Змееносец
+								</div>
+								<div>
+									Стрелец
+								</div>
+								<div>
+									Козерог
+								</div>
+								<div>
+									Водолей
+								</div>
+								<div>
+									Рыбы
+								</div>
+							</div>
+							<div class="table-wrap">
+								<!-- green #AADF80 -->
+								<!-- blue #83ACE9 -->
+								<!-- red #FF554D -->
+								<table>
+									<tr>
+										<th>
+											<a href="#">Овен</a>
+										</th>
+										<th>
+											<a href="#">Телец</a>
+										</th>
+										<th>
+											<a href="#">Близнецы</a>
+										</th>
+										<th>
+											<a href="#">Рак</a>
+										</th>
+										<th>
+											<a href="#">Лев</a>
+										</th>
+										<th>
+											<a href="#">Дева</a>
+										</th>
+										<th>
+											<a href="#">Скорпион</a>
+										</th>
+										<th>
+											<a href="#">Змееносец</a>
+										</th>
+										<th>
+											<a href="#">Стрелец</a>
+										</th>
+										<th>
+											<a href="#">Козерог</a>
+										</th>
+										<th>
+											<a href="#">Водолей</a>
+										</th>
+										<th>
+											<a href="#">Рыбы</a>
+										</th>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="compatibility-block">
+			<div class="container">
+				<div class="compatibility-block__body">
+					<div class="compatibility-block__border" style="border-color: #FF554D;"></div>
+					<div class="compatibility-block__col-1">
+						<div class="compatibility-block__info-box">
+							<h2 class="compatibility-block__info-box-title title-2" style="color: #FF554D;">
+								Таблица совместимости знаков зодиака в сексе
+							</h2>
+							<div class="compatibility-block__info-box-text">
+								Стоит ли ждать от партнера жаркой ночки? Или все будет уныло? Сколько времени понадобится, чтобы получить классный секс? В таблице отражены общие тенденции совместимости знаков зодиака в постели. Помните, что каждый хорош в чем-то своем, и не забывайте посмотреть более детальный разбор по кнопке поиска вверху страницы.
+							</div>
+							<ul class="compatibility-block__info-box-list">
+								<li>
+									<div class="dot" style="background-color: #AADF80;"></div>
+									Хорошая совместимость (71-100 %)
+								</li>
+								<li>
+									<div class="dot" style="background-color: #83ACE9;"></div>
+									Нормальная совместимость (41-70 %)
+
+								</li>
+								<li>
+									<div class="dot" style="background-color: #FF5C7C;"></div>
+									Плохая совместимость (0-40 %)
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="compatibility-block__col-2">
+						<div class="compatibility-table">
+							<div class="compatibility-table__left-col">
+								<div>
+									Овен
+								</div>
+								<div>
+									Телец
+								</div>
+								<div>
+									Близнецы
+								</div>
+								<div>
+									Рак
+								</div>
+								<div>
+									Лев
+								</div>
+								<div>
+									Дева
+								</div>
+								<div>
+									Скорпион
+								</div>
+								<div>
+									Змееносец
+								</div>
+								<div>
+									Стрелец
+								</div>
+								<div>
+									Козерог
+								</div>
+								<div>
+									Водолей
+								</div>
+								<div>
+									Рыбы
+								</div>
+							</div>
+							<div class="table-wrap">
+								<!-- green #AADF80 -->
+								<!-- blue #83ACE9 -->
+								<!-- red #FF554D -->
+								<table>
+									<tr>
+										<th>
+											<a href="#">Овен</a>
+										</th>
+										<th>
+											<a href="#">Телец</a>
+										</th>
+										<th>
+											<a href="#">Близнецы</a>
+										</th>
+										<th>
+											<a href="#">Рак</a>
+										</th>
+										<th>
+											<a href="#">Лев</a>
+										</th>
+										<th>
+											<a href="#">Дева</a>
+										</th>
+										<th>
+											<a href="#">Скорпион</a>
+										</th>
+										<th>
+											<a href="#">Змееносец</a>
+										</th>
+										<th>
+											<a href="#">Стрелец</a>
+										</th>
+										<th>
+											<a href="#">Козерог</a>
+										</th>
+										<th>
+											<a href="#">Водолей</a>
+										</th>
+										<th>
+											<a href="#">Рыбы</a>
+										</th>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="compatibility-block">
+			<div class="container">
+				<div class="compatibility-block__body">
+					<div class="compatibility-block__border" style="border-color: #83ACE9;"></div>
+					<div class="compatibility-block__col-1">
+						<div class="compatibility-block__info-box">
+							<h2 class="compatibility-block__info-box-title title-2" style="color: #83ACE9;">
+								Таблица совместимости знаков зодиака в работе
+							</h2>
+							<div class="compatibility-block__info-box-text">
+								Многих конфликтов и ненужных событий можно избежать, если выстраивать рабочий коллектив на основании гороскопов совместимости. Как понять, приживется ли человек на новом месте, чего от него ожидать и как лучше им руководить? С помощью таблицы вы поймете общий тон совместимости. Конечно же, все решают детали.
+							</div>
+							<ul class="compatibility-block__info-box-list">
+								<li>
+									<div class="dot" style="background-color: #AADF80;"></div>
+									Хорошая совместимость (71-100 %)
+								</li>
+								<li>
+									<div class="dot" style="background-color: #83ACE9;"></div>
+									Нормальная совместимость (41-70 %)
+
+								</li>
+								<li>
+									<div class="dot" style="background-color: #FF5C7C;"></div>
+									Плохая совместимость (0-40 %)
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="compatibility-block__col-2">
+						<div class="compatibility-table">
+							<div class="compatibility-table__left-col">
+								<div>
+									Овен
+								</div>
+								<div>
+									Телец
+								</div>
+								<div>
+									Близнецы
+								</div>
+								<div>
+									Рак
+								</div>
+								<div>
+									Лев
+								</div>
+								<div>
+									Дева
+								</div>
+								<div>
+									Скорпион
+								</div>
+								<div>
+									Змееносец
+								</div>
+								<div>
+									Стрелец
+								</div>
+								<div>
+									Козерог
+								</div>
+								<div>
+									Водолей
+								</div>
+								<div>
+									Рыбы
+								</div>
+							</div>
+							<div class="table-wrap">
+								<!-- green #AADF80 -->
+								<!-- blue #83ACE9 -->
+								<!-- red #FF554D -->
+								<table>
+									<tr>
+										<th>
+											<a href="#">Овен</a>
+										</th>
+										<th>
+											<a href="#">Телец</a>
+										</th>
+										<th>
+											<a href="#">Близнецы</a>
+										</th>
+										<th>
+											<a href="#">Рак</a>
+										</th>
+										<th>
+											<a href="#">Лев</a>
+										</th>
+										<th>
+											<a href="#">Дева</a>
+										</th>
+										<th>
+											<a href="#">Скорпион</a>
+										</th>
+										<th>
+											<a href="#">Змееносец</a>
+										</th>
+										<th>
+											<a href="#">Стрелец</a>
+										</th>
+										<th>
+											<a href="#">Козерог</a>
+										</th>
+										<th>
+											<a href="#">Водолей</a>
+										</th>
+										<th>
+											<a href="#">Рыбы</a>
+										</th>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="dot" style="background-color: #AADF80;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #FF554D;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+										<td>
+											<div class="dot" style="background-color: #83ACE9;"></div>
+										</td>
+									</tr>
+									
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="comments-block">
+			<div class="container-md">
+				<h2 class="comments-block__title title-2">
+					Последние комментарии
+				</h2>
+				<div class="comments-block__list">
+					<div class="comment-b">
+						<div class="comment-b__body">
+							<div class="comment-b__head">
+								<div class="comment-b__photo ibg">
+									<img src="img/photo/user-photo-2.jpg" alt="">
+								</div>
+								<div class="comment-b__wrap">
+									<div class="comment-b__name">Kristin Watson</div>
+									
+
+<div class="comment-b__rating rating-block">
+    <div class="rating-wrap">
+        <div class="rating ">
+            <div class="rating__line">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <div class="rating__activeline">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <input value="4" type="hidden" name="rating">
+            <div class="stars">
+                <span class="star"><i>Ужасно</i></span>
+                <span class="star"><i>Плохо</i></span>
+                <span class="star"><i>Нормально</i></span>
+                <span class="star"><i>Хорошо</i></span>
+                <span class="star"><i>Отлично</i></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="rating-value">5/5</div>
+    
+</div>
+								</div>
+								<div class="comment-b__date">01.02. 2021</div>
+							</div>
+							<div class="comment-b__text">
+								Ну не знаю . В это как то не особо верится. На практике увидела что не всё так как в таких гороскопах. С парнем у нас всё идеально, хотя в гороскепе написано что вообще близко не родня.
+							</div>
+							<a href="#" class="comment-b__reply">
+								<img src="img/icons/Chat.svg" alt="">
+								Ответить
+							</a>
+						</div>
+						<div class="comment-b">
+							<div class="comment-b__body">
+								<div class="comment-b__head">
+									<div class="comment-b__photo ibg">
+										<img src="img/photo/user-photo-2.jpg" alt="">
+									</div>
+									<div class="comment-b__wrap">
+										<div class="comment-b__name">Kristin Watson</div>
+										
+
+<div class="comment-b__rating rating-block">
+    <div class="rating-wrap">
+        <div class="rating ">
+            <div class="rating__line">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <div class="rating__activeline">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <input value="4" type="hidden" name="rating">
+            <div class="stars">
+                <span class="star"><i>Ужасно</i></span>
+                <span class="star"><i>Плохо</i></span>
+                <span class="star"><i>Нормально</i></span>
+                <span class="star"><i>Хорошо</i></span>
+                <span class="star"><i>Отлично</i></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="rating-value">5/5</div>
+    
+</div>
+									</div>
+									<div class="comment-b__date">01.02. 2021</div>
+								</div>
+								<div class="comment-b__text">
+									Ну не знаю . В это как то не особо верится. На практике увидела что не всё так как в таких гороскопах. С парнем у нас всё идеально, хотя в гороскепе написано что вообще близко не родня.
+								</div>
+								<a href="#" class="comment-b__reply">
+									<img src="img/icons/Chat.svg" alt="">
+									Ответить
+								</a>
+							</div>
+							<div class="comment-b">
+								<div class="comment-b__body">
+									<div class="comment-b__head">
+										<div class="comment-b__photo ibg">
+											<img src="img/photo/user-photo-2.jpg" alt="">
+										</div>
+										<div class="comment-b__wrap">
+											<div class="comment-b__name">Kristin Watson</div>
+											
+
+<div class="comment-b__rating rating-block">
+    <div class="rating-wrap">
+        <div class="rating ">
+            <div class="rating__line">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <div class="rating__activeline">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <input value="4" type="hidden" name="rating">
+            <div class="stars">
+                <span class="star"><i>Ужасно</i></span>
+                <span class="star"><i>Плохо</i></span>
+                <span class="star"><i>Нормально</i></span>
+                <span class="star"><i>Хорошо</i></span>
+                <span class="star"><i>Отлично</i></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="rating-value">5/5</div>
+    
+</div>
+										</div>
+										<div class="comment-b__date">01.02. 2021</div>
+									</div>
+									<div class="comment-b__text">
+										Ну не знаю . В это как то не особо верится. На практике увидела что не всё так как в таких гороскопах. С парнем у нас всё идеально, хотя в гороскепе написано что вообще близко не родня.
+									</div>
+									<a href="#" class="comment-b__reply">
+										<img src="img/icons/Chat.svg" alt="">
+										Ответить
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="comment-b">
+						<div class="comment-b__body">
+							<div class="comment-b__head">
+								<div class="comment-b__photo ibg">
+									<img src="img/photo/user-photo-2.jpg" alt="">
+								</div>
+								<div class="comment-b__wrap">
+									<div class="comment-b__name">Kristin Watson</div>
+									
+
+<div class="comment-b__rating rating-block">
+    <div class="rating-wrap">
+        <div class="rating ">
+            <div class="rating__line">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <div class="rating__activeline">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <input value="4" type="hidden" name="rating">
+            <div class="stars">
+                <span class="star"><i>Ужасно</i></span>
+                <span class="star"><i>Плохо</i></span>
+                <span class="star"><i>Нормально</i></span>
+                <span class="star"><i>Хорошо</i></span>
+                <span class="star"><i>Отлично</i></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="rating-value">5/5</div>
+    
+</div>
+								</div>
+								<div class="comment-b__date">01.02. 2021</div>
+							</div>
+							<div class="comment-b__text">
+								Ну не знаю . В это как то не особо верится. На практике увидела что не всё так как в таких гороскопах. С парнем у нас всё идеально, хотя в гороскепе написано что вообще близко не родня.
+							</div>
+							<a href="#" class="comment-b__reply">
+								<img src="img/icons/Chat.svg" alt="">
+								Ответить
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="anime-bg-box add-comment-form">
+					<div class="anime-bg-box__bg">
+						<span></span>
+						<div class="anime-bg-box__bg-l"></div>
+					</div>
+					<div class="anime-bg-box__body add-comment-form__body">
+						<form action="#" class="h-form">
+							<h3 class="add-comment-form__title title-3">Добавить комментарий</h3>
+							<div class="add-comment-form__items">
+								<div class="h-form__item">
+									<div class="h-form__label">Ваше имя</div>
+									<input type="text" class="input">
+								</div>
+								<div class="h-form__item">
+									<div class="h-form__label">Ваш e-mail</div>
+									<input type="text" class="input">
+								</div>
+								<div class="h-form__item full-width">
+									<div class="h-form__label">Ваш комментарий</div>
+									<textarea class="textarea"></textarea>
+								</div>
+
+							</div>
+							<div class="add-comment-form__bottom">
+								<div class="checkbox-wrap">
+									<label class="checkbox">
+										<input class="checkbox" type="checkbox" checked>
+										<div class="checkbox__square-active">
+											<img class="img-svg" src="img/icons/check-square.svg" alt="">
+										</div>
+										<div class="checkbox__text">Согласен на обработку персональных данных</div>
+									</label>
+								</div>
+								<button type="submit" class="h-form__submit btn-default"><span>Узнать совместимость</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 
 
 	<!-- == FOOTER ================== -->
-	
+	<footer class="footer">
+    <div class="container">
+
+
+        <div class="footer__row-1">
+            <a href="#" class="footer__link">
+                Таблица совместимости по знакам
+            </a>
+            <div class="footer__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+            </div>
+            <a href="#" class="footer__link">
+                Политика конфиденциальности
+            </a>
+        </div>
+    </div>
+    <div class="footer__row-2">
+        <div class="container">
+            <div class="footer__flex-wrap ">
+                <div class="footer__text">
+                    Проект sex-positions не оказывает коммерческих услуг для физических лиц. Предложения размещенные на
+                    сайте не являются офертой. Конечные условия уточняйте на сайте производителей, сервисов, учебных и
+                    торговых организациях. Сайт предназначен для граждан старше 18 лет. Зарегистрированный оператор
+                    персональных данных №54-20-005100.
+                </div>
+                <div class="footer__label">
+                    <img src="img/icons/age.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 	<!-- == // FOOTER ================== -->
-	<div class="popup" id="popupSerch">
-	<div class="popup_body">
-		<div class="popup_content">
-
-			<div class="popup__form-wrap">
-				<form action="/" class="popup-search">
-					<div class="popup-search__item">
-						<input class="popup-search__input" type="text" placeholder="SEARCH HERE…">
-					</div>
-					<div class="popup-search__item">
-						<button class="popup-search__submit" type="submit"><span>SUBMIT</span></button>
-					</div>
-				</form>
-			</div>
-			
-		</div>
-	</div>
-</div>
-
-
 
 </body>
 

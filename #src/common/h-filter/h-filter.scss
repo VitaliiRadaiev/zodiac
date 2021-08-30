@@ -1,0 +1,71 @@
+.h-filter {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    display: flex;
+    padding: 36px 45px 52px;
+    align-items: flex-end;
+
+    @media (max-width: 1199.98px) {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: $md3+px) {
+        display: block;     
+    }
+
+    @media (max-width: 575.98px) {
+        padding: 30px 15px 30px;
+    }
+
+    &__col {
+        flex: 0 1  33.333%;
+        margin-right: 30px;
+
+        @media (max-width: 1199.98px) {
+            flex: 0 1 calc(50% - 15px);
+            margin-right: 0;
+        }
+
+
+    }
+
+    &__col-1 {
+    }
+
+    &__col-2 {
+    }
+
+    &__col-3 {
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__col-4 {
+        flex: 0 0 238px;
+        margin-right: 0;
+
+        & .btn-default {
+            width: 100%;
+        }
+    }
+}
+
+.h-form {
+    &__item {
+        margin-bottom: 15px;
+    }
+
+    &__label {
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 24px;
+        color: #36334F;
+        margin-bottom: 10px;
+    }
+
+    &__submit {
+    }
+}

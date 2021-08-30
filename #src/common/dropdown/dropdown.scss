@@ -1,0 +1,101 @@
+.menu-item-has-children {
+    position: relative;
+
+    & .children-item {
+        position: relative;
+        padding-right: 26px;
+
+        &:before {
+            position: absolute;
+            font-family: 'icomoon';
+            content: "\e902";
+            font-weight: 300;
+            font-size: 0.6em;
+            top: 50%;
+            right: 0px;
+            transform: translateY(-50%);
+        }
+
+
+        &.menu__link {
+            padding-right: 40px;
+
+            &:before {
+                right: 15px;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        &:hover {
+            & .sub-menu-wrap {
+                display: block;
+            }
+        }
+    }
+
+    &.header__language {
+        & .sub-menu-wrap {
+            padding-right: 0;
+        }
+    }
+}
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    min-width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba($mainColor, 0.1);
+    transition: all .3s ease;
+    display: none;
+    animation: submenuAnim .4s ease;
+}
+
+@keyframes submenuAnim {
+    from {
+        transform: translateY(20px);
+    }
+    to {transform: translateY(0px);}
+}
+.sub-menu {
+    max-height: 250px;
+    overflow: auto;
+    
+    &__link {
+        display: inline-flex;
+        min-height: 25px;
+        align-items: center;
+        width: 100%;
+        color: inherit;
+        padding: 5px 15px;
+        transition: all .3s ease;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba($mainColor, 0.1);
+            }
+        }
+    }
+
+    & .simplebar-vertical {
+        border-radius: 5px;
+    }
+}
+
+
+.menu {
+    & .sub-menu-wrap {
+        @media (max-width: $md2+px) {
+            position: static;
+            background-color: transparent;
+            box-shadow: none;
+            padding-left: 35px;
+            & .sub-menu {
+                max-height: none;
+            }
+        }
+    }
+}

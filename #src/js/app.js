@@ -8,28 +8,33 @@ window.addEventListener('load', function () {
 	document.body.classList.add('is-load');
 
 	// ==== ADD PADDING-TOP ================================
-	// {
-	// 	let wrapper = document.querySelector('._page._padding-top');
-	// 	if (wrapper) {
-	// 		let header = document.querySelector('.header');
-	// 		if(header) {
-	// 			const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
-	// 			setPedding();
-	// 			window.addEventListener('resize', setPedding);
-	// 		}
+	{
+		let wrapper = document.querySelector('._padding-top');
+		if (wrapper) {
+			let header = document.querySelector('.header');
+			if(header) {
+				const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
+				setPedding();
+				window.addEventListener('resize', setPedding);
+			}
 			
-	// 	}
-	// }
+		}
+	}
 	// ==== AND ADD PADDING-TOP ================================
 
-	@@include('_function.js');
+	
 	@@include('files/dynamic_adapt.js');
+	@@include('files/scrollAnimation.js');
 	@@include('forms.js');
 	@@include('../common/burger/burger.js');
-	@@include('../common/checkbox/checkbox.js');
 	@@include('../common/diagram/diagram.js');
-	@@include('files/scrollAnimation.js');
-	
+	@@include('../common/dropdown/dropdown.js');
+	@@include('../common/header/header.js');
+	@@include('../common/select/select.js');
+	@@include('../common/rating/rating.js');
+	@@include('../common/diagram-info/diagram-info.js');
+
+	@@include('_function.js');
 });
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -55,6 +60,26 @@ window.addEventListener('DOMContentLoaded', function() {
 			document.querySelector('body').classList.add('no-webp');
 		}
 	});
+
+
+
+	$('img.img-svg').each(function(){
+		var $img = $(this);
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
+		$.get(imgURL, function(data) {
+		  var $svg = $(data).find('svg');
+		  if(typeof imgClass !== 'undefined') {
+			$svg = $svg.attr('class', imgClass+' replaced-svg');
+		  }
+		  $svg = $svg.removeAttr('xmlns:a');
+		  if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+			$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+		  }
+		  $img.replaceWith($svg);
+		}, 'xml');
+	  });
+	  
 });
 
 //@@include('plagins/lazy-load.js');

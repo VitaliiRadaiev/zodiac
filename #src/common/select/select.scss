@@ -1,0 +1,140 @@
+.select {
+	position: relative;
+	// .select__item
+	&__item {
+        position: relative;
+	}
+	// .select__title
+	&__title {
+		color: $textColor;
+		background-color: #fff;
+        border: 1px solid #7899F4;
+		cursor: pointer;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        padding: 10px 24px;
+        min-height: 60px;
+	}
+	// .select__value
+	&__value {
+        padding-right: 30px;
+        width: 100%;
+		span {
+            font-family: $mainFontFamily;
+            font-size: 16px;
+            line-height: 1.2em;
+            color: $textColor;
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            & img {
+                flex: 0 0 24px;
+                width: 24px;
+                height: auto;
+                margin-right: 32px;
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 40px;
+                height: 40px;
+                width: 1px;
+                background-color: #F4F3F7;
+                transform: translateY(-50%);
+            }
+		}
+
+		&:before {
+            position: absolute;
+            font-family: 'icomoon';
+            content: "\e902";
+            top: 50%;
+            transform: translateY(-50%);
+            right: 29px;
+			display: inline-block;
+			transition: all 0.3s ease 0s;
+            font-size: 0.6em;
+		}
+	}
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+	// .select__options
+	&__options {
+		color: $textColor;
+		display: none;
+		position: absolute;
+		top: 100%;
+        border-radius: 20px;
+		min-width: 100%;
+		left: 0;
+		background-color: #fff;
+		font-size: 14px;
+		line-height: 170%;
+		padding: 10px;
+		color: $textColor;
+		box-shadow: 0px 0px 10px rgba(236, 157, 171, 0.3);
+		max-height: 315px;
+		overflow-y: auto;
+        box-shadow: 0 0 20px rgba($mainColor, 0.1);
+
+        & .simplebar-track.simplebar-vertical {
+            top: 10px;
+            bottom: 10px;
+            right: 10px;
+        }
+	}
+	// .select__option
+	&__option {
+		cursor: pointer;
+		padding: 10px 14px;
+		margin: 0px 0px 0px 0px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+		@media (min-width: 992px) {
+			&:hover {
+				background: rgba($mainColor, 0.1);
+			}
+		}
+
+        position: relative;
+
+        & img {
+            flex: 0 0 24px;
+            width: 24px;
+            height: auto;
+            margin-right: 32px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 55px;
+            height: 40px;
+            width: 1px;
+            background-color: #F4F3F7;
+            transform: translateY(-50%);
+        }
+	}
+	&._active {
+		z-index: 5;
+		.select__value {
+			&:before {
+				transform: translateY(-50%) scale(1, -1);
+			}
+		}
+		.select__options {
+			display: block;
+		}
+	}
+}

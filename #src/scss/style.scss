@@ -12,9 +12,8 @@
 // ==== // FONTS ===========================================================================================
 
 // ==== VARS ===========================================================================================
-@import "vars"; 
+@import "vars";
 // ==== // VARS ===========================================================================================
-
 
 // ==== Normalize ===========================================================================================
 @import "normalize";
@@ -33,7 +32,7 @@
 //<FANCYBOX>===============================================================================================
 
 // ==== PLAGINS ===========================================================================================
-//@import "plagins/swiper-bundle";
+@import "plagins/swiper-bundle";
 //@import "plagins/drift-basic";
 // ==== // PLAGINS ===========================================================================================
 
@@ -48,8 +47,6 @@
 // ==== POPUP ===========================================================================================
 //@import "common/popup/popup";
 // ==== // POPUP ===========================================================================================
-
-
 
 * {
 	padding: 0px;
@@ -95,58 +92,16 @@ body {
 	-webkit-text-size-adjust: 100%;
 	color: $textColor;
 	font-size: 1.4rem;
-	transition: opacity .8s ease;
+	transition: opacity 0.8s ease;
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	min-height: 100%;
+	background-color: #fafafd;
 
 	&.lock {
 		overflow: hidden;
 	}
-
-	&.is-load {
-		& ._preload-body {
-			opacity: 0;
-			visibility: hidden;
-
-			&:before {
-				display: none;
-			}
-		}
-	}
-
-}
-
-._preload-body {
-	background-color: #fff;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 999;
-	transition: all .6s ease .2s;
-
-	&:before {
-		position: absolute;
-		content: '';
-		z-index: 999;
-		top: 50%;
-		left: 50%;
-		height: 50px;
-		width: 50px;
-		border-radius: 50%;
-		border: 4px solid #6e6e6e;
-		border-right: 4px solid #fff;
-		transform: translate(-50%, -50%);
-		animation: preloadBody 2s linear infinite;
-	}
-}
-
-@keyframes preloadBody {
-	from {transform: translate(-50%, -50%) rotate(0);}
-	to {transform: translate(-50%, -50%) rotate(360deg);}
 }
 
 input,
@@ -197,28 +152,35 @@ textarea {
 	appearance: none;
 }
 
-
-
 .center {
 	text-align: center;
 }
 
-
 ._page {
 	flex: 1 1 auto;
-	padding: 1px 0;
 	width: 100%;
-	min-height: 100%;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
 }
 
-
 .container {
-	max-width: 1140px;
+	max-width: 1850px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 40px;
+
+	@media (max-width: $md4+px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.container-md {
+	max-width: 1450px;
+	margin: 0 auto;
+	padding: 0 40px;
+
+	@media (max-width: $md4+px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 
 .ibg {
@@ -233,254 +195,204 @@ textarea {
 	}
 }
 
+[data-scroll] {
+	& .simplebar-track.simplebar-vertical {
+		width: 10px;
+		background-color: #f4f3f6;
+		border-radius: 5px;
+	}
 
+	& .simplebar-scrollbar {
+		&:before {
+			background: $color2;
+		}
+	}
+}
 
 // === title ========================================================================
 .title-1 {
+	font-family: $titleFontFamily;
+	font-weight: bold;
+	font-size: 38px;
+	line-height: 1.15em;
+	margin-top: 0;
+	margin-bottom: 0;
 
+	@media (max-width: $md3+px) {
+		font-size: 32px;
+	}
 }
 .title-2 {
-
+	font-family: $titleFontFamily;
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 1.21em;
 }
 
 .title-3 {
-
+	font-family: $titleFontFamily;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.5em;
 }
 
 .title-4 {
-
+	font-family: $titleFontFamily;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.44em;
 }
 
 .title-5 {
-
-
 }
 .title-6 {
-
-
 }
 
 .suptitle {
-
 }
 .subtitle {
-
 }
 
 .text {
-
 }
 // === and title ========================================================================
 
-
-
 // === btn ========================================================================
 .btn-default {
+	display: inline-flex;
+	min-height: 60px;
+	background: linear-gradient(98.85deg, #f7b982 -1.62%, #ff8393 75.11%);
+	border-radius: 50px;
+	color: #f4f3f6;
+	align-items: center;
+	justify-content: center;
+	min-width: 200px;
+	padding: 15px 30px;
+	font-weight: 600;
+	font-size: 14px;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
 
+	& > span {
+		position: relative;
+		z-index: 2;
+	}
+
+	&:before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		background-color: #36334f;
+		transition: all 0.3s ease;
+	}
+
+	@media (min-width: 992px) {
+		&:hover {
+			&:before {
+				opacity: 0;
+			}
+		}
+	}
 }
 
 button.btn-default {
-	
 }
 
 // === and btn ========================================================================
 
 .input {
+	background: #ffffff;
+	border: 1px solid #f4f3f7;
+	box-sizing: border-box;
+	border-radius: 50px;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	height: 60px;
+	padding: 10px 24px;
+	width: 100%;
 
+	&:focus {
+		border: 1px solid $color2;
+	}
 }
 
 .textarea {
-
+	background: #ffffff;
+	border: 1px solid #f4f3f7;
+	box-sizing: border-box;
+	border-radius: 30px;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	height: 109px;
+	padding: 20px 24px;
+	width: 100%;
+	resize: none;
+	&:focus {
+		border: 1px solid $color2;
+	}
 }
 
 .link {
-
 }
-
 
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
-	& h1 {}
-	& h2 {
-
+	font-size: 16px;
+	line-height: 1.5em;
+	color: rgba($textColor, 0.8);
+	& h1 {
 	}
-	& h3 {}
-	& h4 {}
+	& h2 {
+	}
+	& h3 {
+	}
+	& h4 {
+	}
 
 	& h5 {
-
 	}
-	& h6 {}
+	& h6 {
+	}
 
 	& p {
-
+		margin-bottom: 1.25em;
 	}
 
 	& ul {
-
 	}
 
-	& ol {}
+	& ol {
+	}
 
-	& figure {}
-
+	& figure {
+	}
 }
 // === and TEXT CONTETN BLOCK ========================================================================
-
 
 // ==== BLOCKS =====================================================
 @import "../common/header/header";
 @import "../common/footer/footer";
 @import "../common/checkbox/checkbox";
 @import "../common/diagram/diagram";
+@import "../common/dropdown/dropdown";
+@import "../common/anime-bg-box/anime-bg-box";
+@import "../common/h-filter/h-filter";
+@import "../common/select/select";
+@import "../common/comments-block/comments-block";
+@import "../common/rating/rating";
+@import "../common/hero/hero";
+@import "../common/diagram-info/diagram-info";
 // ==== BLOCKS =====================================================
 
-
 // ==== PAGES =====================================================
+@import "pages/home";
+@import "pages/single-zodiac";
 
-	// ==== HOME =====================================================
-	@import "pages/home";
-	// ==== AND HOME =====================================================
-	
 // ==== AND PAGES =====================================================
-
-.bg-test-wrap {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-	width: 100%;
-	max-width: 1200px;
-	height: 600px;
-	border-radius: 60px;
-	position: relative;
-	margin: 100px auto 100px;
-	margin-bottom: 500px;
-	&:before {
-		position: absolute;
-		content: '';
-		display: block;
-		z-index: 4;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		box-shadow: -70px -70px #fff;
-		border-radius: 60px;
-	}
-
-	&:after {
-		position: absolute;
-		content: '';
-		display: block;
-		z-index: 5;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 120%;
-		box-shadow: 70px -70px #fff;
-		border-radius: 60px;
-	}
-
-	& > span {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 6;
-
-		&:before {
-			position: absolute;
-			content: '';
-			display: block;
-			z-index: 4;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			box-shadow: -70px 70px #fff;
-			border-radius: 60px;
-		}
-	
-		&:after {
-			position: absolute;
-			content: '';
-			display: block;
-			z-index: 5;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 120%;
-			box-shadow: 70px 70px #fff;
-			border-radius: 60px;
-		}
-	}
-}
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-.bg-test {
-	width: 100%;
-	height: 100%;
-	border-radius: 60px;
-	position: relative;
-	overflow: hidden;
-	font-size: 62px;
-}
-
-@mixin dots($count) {
-	$text-shadow: ();
-	@for $i from 0 through $count {
-	  $text-shadow: $text-shadow,
-				   (-.5+(random()) * 3) + em
-				   (-.5+(random()) * 3) + em
-				   7px
-				   hsla(random() * 360, 100%, 50%,.9);
-	}
-	text-shadow: $text-shadow;
-  }
-  
-
-  
- .bg-test::before, .bg-test::after {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 3em;
-	height: 3em;
-	content: '☁';
-	mix-blend-mode: screen;
-	animation: 44s -27s move infinite ease-in-out alternate;
-  }
-  
-
-  
-  .bg-test::before {
-	@include dots(20);
-	animation-duration: 42s;
-	animation-delay: -23s;
-  }
-  
-  .bg-test::after {
-	@include dots(20);
-	animation-duration: 41s;
-	animation-delay: -19s;
-  }
-  
-  
-  @keyframes move {
-	from {
-	  transform: rotate(0deg) scale(12) translateX(-20px);
-	}
-	to {
-	  transform: rotate(360deg) scale(18) translateX(20px);
-	}
-  }

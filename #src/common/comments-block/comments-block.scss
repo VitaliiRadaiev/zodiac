@@ -1,0 +1,128 @@
+.comments-block {
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        margin-bottom: 50px;
+    }
+
+}
+
+.comment-b {
+    &__body {
+        width: 100%;
+        max-width: 1168px;
+        background: #ffffff;
+        border: 1px solid #f4f3f7;
+        box-shadow: 0px 4px 40px rgba(174, 167, 188, 0.2);
+        border-radius: 20px;
+        padding: 47px 60px 47px 40px;
+        position: relative;
+        margin-bottom: 20px;
+
+        @media (max-width: $md4+px) {
+            padding: 30px 15px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 0;
+            width: 6px;
+            height: 80%;
+            background-color: #F4F3F7;
+            z-index: 2;
+            border-radius: 0 10px 10px 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 2px;
+    }
+
+    &__photo {
+        flex: 0 0 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__wrap {
+        margin-bottom: 20px;
+        margin-right: auto;
+        padding-right: 20px;
+    }
+
+    &__name {
+        font-family: $titleFontFamily;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.5em;
+        margin-bottom: 5px;
+    }
+
+    &__date {
+        margin-bottom: 20px;
+        font-size: 12px;
+        line-height: 1.2em;
+        color: #a0acbe;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
+        color: #78859c;
+        margin-bottom: 20px;
+    }
+
+    &__reply {
+        display: inline-flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        color: #87c259;
+        transition: all .3s ease;
+
+        & img {
+            flex: 0 0 20px;
+            height: auto;
+            width: 20px;
+            margin-right: 16px;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: #FFCF65;
+            }
+        }
+    }
+
+    & > .comment-b {
+        padding-left: 100px;
+
+        @media (max-width: $md2+px) {
+            padding-left: 70px;
+        }
+        @media (max-width: $md3+px) {
+            padding-left: 40px;
+        }
+        @media (max-width: $md4+px) {
+            padding-left: 20px;
+        }
+
+        & .comment-b__body {
+            &:before {
+                background-color: #87C259;
+            }
+        }
+    }
+}

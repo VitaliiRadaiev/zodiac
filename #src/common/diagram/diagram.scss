@@ -3,8 +3,6 @@
     width: 100%;
     max-width: 995px;
     position: relative;
-    margin-top: 100px;
-    margin-bottom: 100px;
     opacity: 0;
     transition: all 1s ease;
 
@@ -14,6 +12,7 @@
         left: 0;
         top: 0;
         pointer-events: none;
+
         &.level-10 {
             width: 31.15%;
             height: 42.5%;
@@ -460,7 +459,8 @@
         transition: all 0.4s ease;
         opacity: 0;
         z-index: 30;
-        display: inline-flex;
+        display: grid;
+        grid-template-columns: 60px auto;
         align-items: center;
         left: 0;
         top: 0;
@@ -468,9 +468,16 @@
         min-width: 256px;
         padding: 5px 7px 24px;
         background: url("../img/diagram/tooltip.svg") center no-repeat;
-        background-size: contain;
+        background-size: 100% 105%;
         transform: translate(-50%, -100%);
         pointer-events: none;
+
+        @media (max-width: $md3+px) {
+            grid-template-columns: 40px auto;
+            min-height: 50px;
+            min-width: 180px;
+            padding-bottom: 19px;
+        }
     }
 
     &__tooltip-color {
@@ -480,6 +487,11 @@
         border: 2px solid #f4f3f7;
         box-sizing: border-box;
         border-radius: 20px;
+
+        @media (max-width: $md3+px) {
+            height: 40px;
+            border-radius: 10px;
+        }
     }
     &__tooltip-text {
         font-weight: 600;
@@ -490,5 +502,9 @@
         text-align: center;
         padding: 0 5px;
         white-space: nowrap;
+
+        @media (max-width: $md3+px) {
+            font-size: 12px;
+        }
     }
 }

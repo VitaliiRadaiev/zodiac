@@ -67,28 +67,6 @@ let _slideToggle = (target, duration = 500) => {
 
 
 
-
-
-$('img.img-svg').each(function(){
-  var $img = $(this);
-  var imgClass = $img.attr('class');
-  var imgURL = $img.attr('src');
-  $.get(imgURL, function(data) {
-    var $svg = $(data).find('svg');
-    if(typeof imgClass !== 'undefined') {
-      $svg = $svg.attr('class', imgClass+' replaced-svg');
-    }
-    $svg = $svg.removeAttr('xmlns:a');
-    if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-      $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-    }
-    $img.replaceWith($svg);
-  }, 'xml');
-});
-
-
-
-
 //Spollers
 function spollerInit() {
 	let spollers = document.querySelectorAll("._spoller");
@@ -201,3 +179,18 @@ function setSameHeight(items) {
     let maxHeight = Math.max(...Array.from(items).map(i => i.clientHeight));
     items.forEach(i => i.style.minHeight = maxHeight + 'px');
 }
+
+
+function initScrollBar() {
+	let scrollElements = document.querySelectorAll('[data-scroll]');
+	if(scrollElements.length) {
+		scrollElements.forEach(el => {
+			if(!el.getAttribute('data-simplebar') && document.documentElement.clientWidth > 991.98) {
+				new SimpleBar(el, { autoHide: false });
+			}
+		})
+
+	}
+}
+
+initScrollBar();
