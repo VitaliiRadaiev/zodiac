@@ -1,0 +1,59 @@
+.sidebar-list {
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    padding: 55px 60px;
+
+    &._fixed {
+        position: fixed;
+
+        &._static {
+            position: static;
+        }
+    }
+
+    @media (max-width: $md3+px) {
+        padding: 35px 32.5px;
+    }
+
+    @media (max-width: $md4+px) {
+        padding: 30px 15px;
+    }
+
+    & ul {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        color: #ffffff;
+
+        & > li {
+            position: relative;
+            padding-left: 22px;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            & > a {
+                color: #fff;
+                transition: all .3s ease;
+
+                @media (min-width: 992px) {
+                    &:hover {
+                        color: $hover;
+                    }
+                }
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 8px;
+                left: 9px;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+        }
+    }
+}

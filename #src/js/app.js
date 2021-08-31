@@ -33,6 +33,7 @@ window.addEventListener('load', function () {
 	@@include('../common/select/select.js');
 	@@include('../common/rating/rating.js');
 	@@include('../common/diagram-info/diagram-info.js');
+	@@include('../common/sidebar-list/sidebar-list.js');
 
 	@@include('_function.js');
 });

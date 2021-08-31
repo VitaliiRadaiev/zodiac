@@ -6,7 +6,6 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-    
         }
 
         @media (max-width: 1399.98px) {
@@ -24,7 +23,7 @@
             &.full-width {
                 flex: 0 1 100%;
 
-                & .single-zodiac-info-card__text  {
+                & .single-zodiac-info-card__text {
                     @media (min-width: 768px) {
                         max-height: 370px;
                     }
@@ -65,13 +64,11 @@
                 width: 40px;
             }
         }
-    
 
         & img {
             width: 50px;
             height: auto;
         }
-
     }
 
     &__title {
@@ -85,8 +82,77 @@
     }
 }
 
-
-
 .h-filter-wrap {
     margin-bottom: 50px;
 }
+
+.bg-wrap {
+    margin-bottom: 50px;
+
+    & .hero {
+        margin-bottom: 0;
+    }
+
+    & .anime-bg-box__body {
+        padding: 50px 100px 50px;
+        color: $textColorLight;
+
+        @media (max-width: 1399.98px) {
+            padding: 50px 32.5px 50px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding: 30px 15px 30px;
+        }
+    }
+
+    & .hero__bottom {
+        color: $textColorLight;
+        background-color: transparent;
+        box-shadow: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.single-zodiac-info-v2 {
+    display: flex;
+
+    @media (max-width: $md2+px) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &__col-1 {
+        color: $textColor;
+
+        @media (min-width: 992px) {
+            flex: 1 1 auto;
+            margin-right: 30px;
+        }
+
+        & > div {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+
+                
+            }
+        }
+    }
+
+    &__col-2 {
+        flex: 0 0 370px;
+        display: flex;
+        flex-direction: column;
+
+        &._flex-end {
+            justify-content: flex-end;
+        }
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
