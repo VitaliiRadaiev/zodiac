@@ -97,28 +97,28 @@
         overflow: hidden;
         font-size: 62px;
 
-        // &:before, &:after{ 
-        //     position: absolute;
-        //     top: 50%;
-        //     left: 50%;
-        //     width: 4em; 
-        //     height: 4em;
-        //     content: "☁";
-        //     mix-blend-mode: screen;
-        //     animation: 44s -27s move infinite ease-in-out alternate; 
-        //     color: transparent;
-        // } 
+        &:before, &:after{ 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 4em; 
+            height: 4em;
+            content: "☁";
+            mix-blend-mode: screen;
+            animation: 44s -27s move infinite ease-in-out alternate; 
+            color: transparent;
+        } 
 
-        // &:before { 
-        //     @include dots(7);
-        //     animation-duration: 42s;
-        //     animation-delay: -23s;
-        // }
-        // &:after {
-        //     @include dots(7);
-        //     animation-duration: 41s;
-        //     animation-delay: -19s;
-        // }
+        &:before { 
+            @include dots(7);
+            animation-duration: 42s;
+            animation-delay: -23s;
+        }
+        &:after {
+            @include dots(7);
+            animation-duration: 41s;
+            animation-delay: -19s;
+        }
     }
 
     &__body {

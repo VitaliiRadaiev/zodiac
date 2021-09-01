@@ -19,6 +19,30 @@
         padding: 30px 15px;
     }
 
+    &.dark {
+        border-color: #7899F4;
+        & ul {
+            & > li {
+                &:before {
+                    background-color: #858699;
+                }
+                & > a {
+                     color: #858699;
+
+                     @media (min-width: 992px) {
+                        &:hover {
+                            color: $textColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
     & ul {
         font-weight: 600;
         font-size: 14px;
@@ -36,6 +60,7 @@
             & > a {
                 color: #fff;
                 transition: all .3s ease;
+                font-weight: 700;
 
                 @media (min-width: 992px) {
                     &:hover {

@@ -1650,6 +1650,15 @@ textarea {
   color: rgba(83, 85, 126, 0.8);
 }
 
+.text-content h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+  color: #53557E;
+}
+
 .text-content p {
   margin-bottom: 1.25em;
 }
@@ -2081,12 +2090,12 @@ textarea {
   height: 42.5%;
 }
 
-.diagram svg.level-10:nth-child(1) {
+.diagram svg.level-10:nth-child(8) {
   left: 17%;
   top: 0;
 }
 
-.diagram svg.level-10:nth-child(2) {
+.diagram svg.level-10:nth-child(1) {
   left: 41.8%;
   top: -4%;
   -webkit-transform: rotate(45deg);
@@ -2094,7 +2103,7 @@ textarea {
           transform: rotate(45deg);
 }
 
-.diagram svg.level-10:nth-child(3) {
+.diagram svg.level-10:nth-child(2) {
   left: 62.4%;
   top: 11.2%;
   -webkit-transform: rotate(90deg);
@@ -2102,7 +2111,7 @@ textarea {
           transform: rotate(90deg);
 }
 
-.diagram svg.level-10:nth-child(4) {
+.diagram svg.level-10:nth-child(3) {
   left: 66.35%;
   top: 36.2%;
   -webkit-transform: rotate(135deg);
@@ -2110,7 +2119,7 @@ textarea {
           transform: rotate(135deg);
 }
 
-.diagram svg.level-10:nth-child(5) {
+.diagram svg.level-10:nth-child(4) {
   left: 51.5%;
   top: 57.2%;
   -webkit-transform: rotate(180deg);
@@ -2118,7 +2127,7 @@ textarea {
           transform: rotate(180deg);
 }
 
-.diagram svg.level-10:nth-child(6) {
+.diagram svg.level-10:nth-child(5) {
   left: 26.68%;
   top: 61.2%;
   -webkit-transform: rotate(225deg);
@@ -2126,7 +2135,7 @@ textarea {
           transform: rotate(225deg);
 }
 
-.diagram svg.level-10:nth-child(7) {
+.diagram svg.level-10:nth-child(6) {
   left: 6.3%;
   top: 45.7%;
   -webkit-transform: rotate(270deg);
@@ -2134,7 +2143,7 @@ textarea {
           transform: rotate(270deg);
 }
 
-.diagram svg.level-10:nth-child(8) {
+.diagram svg.level-10:nth-child(7) {
   left: 2.3%;
   top: 20.7%;
   -webkit-transform: rotate(315deg);
@@ -2147,12 +2156,12 @@ textarea {
   height: 37.88%;
 }
 
-.diagram svg.level-9:nth-child(1) {
+.diagram svg.level-9:nth-child(8) {
   left: 20.1%;
   top: 4.6%;
 }
 
-.diagram svg.level-9:nth-child(2) {
+.diagram svg.level-9:nth-child(1) {
   left: 42.8%;
   top: 1.1%;
   -webkit-transform: rotate(45deg);
@@ -2160,7 +2169,7 @@ textarea {
           transform: rotate(45deg);
 }
 
-.diagram svg.level-9:nth-child(3) {
+.diagram svg.level-9:nth-child(2) {
   left: 61.7%;
   top: 15.15%;
   -webkit-transform: rotate(90deg);
@@ -2168,7 +2177,7 @@ textarea {
           transform: rotate(90deg);
 }
 
-.diagram svg.level-9:nth-child(4) {
+.diagram svg.level-9:nth-child(3) {
   left: 65.2%;
   top: 38.1%;
   -webkit-transform: rotate(135deg);
@@ -2176,7 +2185,7 @@ textarea {
           transform: rotate(135deg);
 }
 
-.diagram svg.level-9:nth-child(5) {
+.diagram svg.level-9:nth-child(4) {
   left: 51.4%;
   top: 57.24%;
   -webkit-transform: rotate(180deg);
@@ -2184,7 +2193,7 @@ textarea {
           transform: rotate(180deg);
 }
 
-.diagram svg.level-9:nth-child(6) {
+.diagram svg.level-9:nth-child(5) {
   left: 28.56%;
   top: 60.83%;
   -webkit-transform: rotate(225deg);
@@ -2192,7 +2201,7 @@ textarea {
           transform: rotate(225deg);
 }
 
-.diagram svg.level-9:nth-child(7) {
+.diagram svg.level-9:nth-child(6) {
   left: 10%;
   top: 46.43%;
   -webkit-transform: rotate(270deg);
@@ -2200,7 +2209,7 @@ textarea {
           transform: rotate(270deg);
 }
 
-.diagram svg.level-9:nth-child(8) {
+.diagram svg.level-9:nth-child(7) {
   left: 6.6%;
   top: 23.4%;
   -webkit-transform: rotate(315deg);
@@ -2213,12 +2222,12 @@ textarea {
   height: 33.36%;
 }
 
-.diagram svg.level-8:nth-child(1) {
+.diagram svg.level-8:nth-child(8) {
   left: 23.3%;
   top: 9.15%;
 }
 
-.diagram svg.level-8:nth-child(2) {
+.diagram svg.level-8:nth-child(1) {
   left: 43.97%;
   top: 6%;
   -webkit-transform: rotate(45deg);
@@ -2226,7 +2235,7 @@ textarea {
           transform: rotate(45deg);
 }
 
-.diagram svg.level-8:nth-child(3) {
+.diagram svg.level-8:nth-child(2) {
   left: 60.9%;
   top: 19.1%;
   -webkit-transform: rotate(90deg);
@@ -2234,7 +2243,7 @@ textarea {
           transform: rotate(90deg);
 }
 
-.diagram svg.level-8:nth-child(4) {
+.diagram svg.level-8:nth-child(3) {
   left: 64%;
   top: 39.8%;
   -webkit-transform: rotate(135deg);
@@ -2242,7 +2251,7 @@ textarea {
           transform: rotate(135deg);
 }
 
-.diagram svg.level-8:nth-child(5) {
+.diagram svg.level-8:nth-child(4) {
   left: 51.4%;
   top: 57.2%;
   -webkit-transform: rotate(180deg);
@@ -2250,7 +2259,7 @@ textarea {
           transform: rotate(180deg);
 }
 
-.diagram svg.level-8:nth-child(6) {
+.diagram svg.level-8:nth-child(5) {
   left: 30.7%;
   top: 60.3%;
   -webkit-transform: rotate(225deg);
@@ -2258,7 +2267,7 @@ textarea {
           transform: rotate(225deg);
 }
 
-.diagram svg.level-8:nth-child(7) {
+.diagram svg.level-8:nth-child(6) {
   left: 13.9%;
   top: 47.1%;
   -webkit-transform: rotate(270deg);
@@ -2266,7 +2275,7 @@ textarea {
           transform: rotate(270deg);
 }
 
-.diagram svg.level-8:nth-child(8) {
+.diagram svg.level-8:nth-child(7) {
   left: 10.9%;
   top: 26.2%;
   -webkit-transform: rotate(315deg);
@@ -2279,12 +2288,12 @@ textarea {
   height: 28.84%;
 }
 
-.diagram svg.level-7:nth-child(1) {
+.diagram svg.level-7:nth-child(8) {
   left: 26.5%;
   top: 13.6%;
 }
 
-.diagram svg.level-7:nth-child(2) {
+.diagram svg.level-7:nth-child(1) {
   left: 45.15%;
   top: 11%;
   -webkit-transform: rotate(45deg);
@@ -2292,7 +2301,7 @@ textarea {
           transform: rotate(45deg);
 }
 
-.diagram svg.level-7:nth-child(3) {
+.diagram svg.level-7:nth-child(2) {
   left: 60.3%;
   top: 22.9%;
   -webkit-transform: rotate(90deg);
@@ -2300,7 +2309,7 @@ textarea {
           transform: rotate(90deg);
 }
 
-.diagram svg.level-7:nth-child(4) {
+.diagram svg.level-7:nth-child(3) {
   left: 62.9%;
   top: 41.65%;
   -webkit-transform: rotate(135deg);
@@ -2308,7 +2317,7 @@ textarea {
           transform: rotate(135deg);
 }
 
-.diagram svg.level-7:nth-child(5) {
+.diagram svg.level-7:nth-child(4) {
   left: 51.45%;
   top: 57.26%;
   -webkit-transform: rotate(180deg);
@@ -2316,7 +2325,7 @@ textarea {
           transform: rotate(180deg);
 }
 
-.diagram svg.level-7:nth-child(6) {
+.diagram svg.level-7:nth-child(5) {
   left: 32.75%;
   top: 59.85%;
   -webkit-transform: rotate(225deg);
@@ -2324,7 +2333,7 @@ textarea {
           transform: rotate(225deg);
 }
 
-.diagram svg.level-7:nth-child(7) {
+.diagram svg.level-7:nth-child(6) {
   left: 17.8%;
   top: 47.75%;
   -webkit-transform: rotate(270deg);
@@ -2332,7 +2341,7 @@ textarea {
           transform: rotate(270deg);
 }
 
-.diagram svg.level-7:nth-child(8) {
+.diagram svg.level-7:nth-child(7) {
   left: 15.25%;
   top: 28.87%;
   -webkit-transform: rotate(315deg);
@@ -2345,12 +2354,12 @@ textarea {
   height: 24.32%;
 }
 
-.diagram svg.level-6:nth-child(1) {
+.diagram svg.level-6:nth-child(8) {
   left: 29.8%;
   top: 18.158%;
 }
 
-.diagram svg.level-6:nth-child(2) {
+.diagram svg.level-6:nth-child(1) {
   left: 46.3%;
   top: 16.1%;
   -webkit-transform: rotate(45deg);
@@ -2358,7 +2367,7 @@ textarea {
           transform: rotate(45deg);
 }
 
-.diagram svg.level-6:nth-child(3) {
+.diagram svg.level-6:nth-child(2) {
   left: 59.75%;
   top: 26.75%;
   -webkit-transform: rotate(90deg);
@@ -2366,7 +2375,7 @@ textarea {
           transform: rotate(90deg);
 }
 
-.diagram svg.level-6:nth-child(4) {
+.diagram svg.level-6:nth-child(3) {
   left: 61.85%;
   top: 43.45%;
   -webkit-transform: rotate(135deg);
@@ -2374,7 +2383,7 @@ textarea {
           transform: rotate(135deg);
 }
 
-.diagram svg.level-6:nth-child(5) {
+.diagram svg.level-6:nth-child(4) {
   left: 51.45%;
   top: 57.25%;
   -webkit-transform: rotate(180deg);
@@ -2382,7 +2391,7 @@ textarea {
           transform: rotate(180deg);
 }
 
-.diagram svg.level-6:nth-child(6) {
+.diagram svg.level-6:nth-child(5) {
   left: 34.9%;
   top: 59.4%;
   -webkit-transform: rotate(225deg);
@@ -2390,7 +2399,7 @@ textarea {
           transform: rotate(225deg);
 }
 
-.diagram svg.level-6:nth-child(7) {
+.diagram svg.level-6:nth-child(6) {
   left: 21.7%;
   top: 48.4%;
   -webkit-transform: rotate(270deg);
@@ -2398,7 +2407,7 @@ textarea {
           transform: rotate(270deg);
 }
 
-.diagram svg.level-6:nth-child(8) {
+.diagram svg.level-6:nth-child(7) {
   left: 19.6%;
   top: 31.6%;
   -webkit-transform: rotate(315deg);
@@ -2411,12 +2420,12 @@ textarea {
   height: 19.79%;
 }
 
-.diagram svg.level-5:nth-child(1) {
+.diagram svg.level-5:nth-child(8) {
   left: 32.99%;
   top: 22.7%;
 }
 
-.diagram svg.level-5:nth-child(2) {
+.diagram svg.level-5:nth-child(1) {
   left: 47.45%;
   top: 21.05%;
   -webkit-transform: rotate(45deg);
@@ -2424,7 +2433,7 @@ textarea {
           transform: rotate(45deg);
 }
 
-.diagram svg.level-5:nth-child(3) {
+.diagram svg.level-5:nth-child(2) {
   left: 59.1%;
   top: 30.6%;
   -webkit-transform: rotate(90deg);
@@ -2432,7 +2441,7 @@ textarea {
           transform: rotate(90deg);
 }
 
-.diagram svg.level-5:nth-child(4) {
+.diagram svg.level-5:nth-child(3) {
   left: 60.7%;
   top: 45.24%;
   -webkit-transform: rotate(135deg);
@@ -2440,7 +2449,7 @@ textarea {
           transform: rotate(135deg);
 }
 
-.diagram svg.level-5:nth-child(5) {
+.diagram svg.level-5:nth-child(4) {
   left: 51.45%;
   top: 57.2%;
   -webkit-transform: rotate(180deg);
@@ -2448,7 +2457,7 @@ textarea {
           transform: rotate(180deg);
 }
 
-.diagram svg.level-5:nth-child(6) {
+.diagram svg.level-5:nth-child(5) {
   left: 37%;
   top: 58.85%;
   -webkit-transform: rotate(225deg);
@@ -2456,7 +2465,7 @@ textarea {
           transform: rotate(225deg);
 }
 
-.diagram svg.level-5:nth-child(7) {
+.diagram svg.level-5:nth-child(6) {
   left: 25.56%;
   top: 49.1%;
   -webkit-transform: rotate(270deg);
@@ -2464,7 +2473,7 @@ textarea {
           transform: rotate(270deg);
 }
 
-.diagram svg.level-5:nth-child(8) {
+.diagram svg.level-5:nth-child(7) {
   left: 23.95%;
   top: 34.35%;
   -webkit-transform: rotate(315deg);
@@ -2477,12 +2486,12 @@ textarea {
   height: 15.27%;
 }
 
-.diagram svg.level-4:nth-child(1) {
+.diagram svg.level-4:nth-child(8) {
   left: 36.2%;
   top: 27.25%;
 }
 
-.diagram svg.level-4:nth-child(2) {
+.diagram svg.level-4:nth-child(1) {
   left: 48.55%;
   top: 26.1%;
   -webkit-transform: rotate(45deg);
@@ -2490,7 +2499,7 @@ textarea {
           transform: rotate(45deg);
 }
 
-.diagram svg.level-4:nth-child(3) {
+.diagram svg.level-4:nth-child(2) {
   left: 58.4%;
   top: 34.45%;
   -webkit-transform: rotate(90deg);
@@ -2498,7 +2507,7 @@ textarea {
           transform: rotate(90deg);
 }
 
-.diagram svg.level-4:nth-child(4) {
+.diagram svg.level-4:nth-child(3) {
   left: 59.4%;
   top: 47%;
   -webkit-transform: rotate(135deg);
@@ -2506,7 +2515,7 @@ textarea {
           transform: rotate(135deg);
 }
 
-.diagram svg.level-4:nth-child(5) {
+.diagram svg.level-4:nth-child(4) {
   left: 51.45%;
   top: 57.25%;
   -webkit-transform: rotate(180deg);
@@ -2514,7 +2523,7 @@ textarea {
           transform: rotate(180deg);
 }
 
-.diagram svg.level-4:nth-child(6) {
+.diagram svg.level-4:nth-child(5) {
   left: 39.05%;
   top: 58.4%;
   -webkit-transform: rotate(225deg);
@@ -2522,7 +2531,7 @@ textarea {
           transform: rotate(225deg);
 }
 
-.diagram svg.level-4:nth-child(7) {
+.diagram svg.level-4:nth-child(6) {
   left: 29.45%;
   top: 49.7%;
   -webkit-transform: rotate(270deg);
@@ -2530,7 +2539,7 @@ textarea {
           transform: rotate(270deg);
 }
 
-.diagram svg.level-4:nth-child(8) {
+.diagram svg.level-4:nth-child(7) {
   left: 28.3%;
   top: 37.1%;
   -webkit-transform: rotate(315deg);
@@ -2543,12 +2552,12 @@ textarea {
   height: 10.65%;
 }
 
-.diagram svg.level-3:nth-child(1) {
+.diagram svg.level-3:nth-child(8) {
   left: 39.3%;
   top: 31.8%;
 }
 
-.diagram svg.level-3:nth-child(2) {
+.diagram svg.level-3:nth-child(1) {
   left: 49.65%;
   top: 31.05%;
   -webkit-transform: rotate(45deg);
@@ -2556,7 +2565,7 @@ textarea {
           transform: rotate(45deg);
 }
 
-.diagram svg.level-3:nth-child(3) {
+.diagram svg.level-3:nth-child(2) {
   left: 57.7%;
   top: 38.3%;
   -webkit-transform: rotate(90deg);
@@ -2564,7 +2573,7 @@ textarea {
           transform: rotate(90deg);
 }
 
-.diagram svg.level-3:nth-child(4) {
+.diagram svg.level-3:nth-child(3) {
   left: 58.4%;
   top: 48.8%;
   -webkit-transform: rotate(135deg);
@@ -2572,7 +2581,7 @@ textarea {
           transform: rotate(135deg);
 }
 
-.diagram svg.level-3:nth-child(5) {
+.diagram svg.level-3:nth-child(4) {
   left: 51.5%;
   top: 57.3%;
   -webkit-transform: rotate(180deg);
@@ -2580,7 +2589,7 @@ textarea {
           transform: rotate(180deg);
 }
 
-.diagram svg.level-3:nth-child(6) {
+.diagram svg.level-3:nth-child(5) {
   left: 41.15%;
   top: 58%;
   -webkit-transform: rotate(225deg);
@@ -2588,7 +2597,7 @@ textarea {
           transform: rotate(225deg);
 }
 
-.diagram svg.level-3:nth-child(7) {
+.diagram svg.level-3:nth-child(6) {
   left: 33.3%;
   top: 50.5%;
   -webkit-transform: rotate(270deg);
@@ -2596,7 +2605,7 @@ textarea {
           transform: rotate(270deg);
 }
 
-.diagram svg.level-3:nth-child(8) {
+.diagram svg.level-3:nth-child(7) {
   left: 32.5%;
   top: 39.9%;
   -webkit-transform: rotate(315deg);
@@ -2609,12 +2618,12 @@ textarea {
   height: 6.13%;
 }
 
-.diagram svg.level-2:nth-child(1) {
+.diagram svg.level-2:nth-child(8) {
   left: 42.5%;
   top: 36.4%;
 }
 
-.diagram svg.level-2:nth-child(2) {
+.diagram svg.level-2:nth-child(1) {
   left: 50.75%;
   top: 36.05%;
   -webkit-transform: rotate(45deg);
@@ -2622,7 +2631,7 @@ textarea {
           transform: rotate(45deg);
 }
 
-.diagram svg.level-2:nth-child(3) {
+.diagram svg.level-2:nth-child(2) {
   left: 57%;
   top: 42.2%;
   -webkit-transform: rotate(90deg);
@@ -2630,7 +2639,7 @@ textarea {
           transform: rotate(90deg);
 }
 
-.diagram svg.level-2:nth-child(4) {
+.diagram svg.level-2:nth-child(3) {
   left: 57.2%;
   top: 50.6%;
   -webkit-transform: rotate(135deg);
@@ -2638,7 +2647,7 @@ textarea {
           transform: rotate(135deg);
 }
 
-.diagram svg.level-2:nth-child(5) {
+.diagram svg.level-2:nth-child(4) {
   left: 51.5%;
   top: 57.2%;
   -webkit-transform: rotate(180deg);
@@ -2646,7 +2655,7 @@ textarea {
           transform: rotate(180deg);
 }
 
-.diagram svg.level-2:nth-child(6) {
+.diagram svg.level-2:nth-child(5) {
   left: 43.2%;
   top: 57.5%;
   -webkit-transform: rotate(225deg);
@@ -2654,7 +2663,7 @@ textarea {
           transform: rotate(225deg);
 }
 
-.diagram svg.level-2:nth-child(7) {
+.diagram svg.level-2:nth-child(6) {
   left: 37.2%;
   top: 51.15%;
   -webkit-transform: rotate(270deg);
@@ -2662,7 +2671,7 @@ textarea {
           transform: rotate(270deg);
 }
 
-.diagram svg.level-2:nth-child(8) {
+.diagram svg.level-2:nth-child(7) {
   left: 36.95%;
   top: 42.7%;
   -webkit-transform: rotate(315deg);
@@ -2675,12 +2684,12 @@ textarea {
   height: 2.61%;
 }
 
-.diagram svg.level-1:nth-child(1) {
+.diagram svg.level-1:nth-child(8) {
   left: 45.1%;
   top: 39.9%;
 }
 
-.diagram svg.level-1:nth-child(2) {
+.diagram svg.level-1:nth-child(1) {
   left: 51.7%;
   top: 39.8%;
   -webkit-transform: rotate(45deg);
@@ -2688,7 +2697,7 @@ textarea {
           transform: rotate(45deg);
 }
 
-.diagram svg.level-1:nth-child(3) {
+.diagram svg.level-1:nth-child(2) {
   left: 56.7%;
   top: 45%;
   -webkit-transform: rotate(90deg);
@@ -2696,7 +2705,7 @@ textarea {
           transform: rotate(90deg);
 }
 
-.diagram svg.level-1:nth-child(4) {
+.diagram svg.level-1:nth-child(3) {
   left: 56.7%;
   top: 51.8%;
   -webkit-transform: rotate(135deg);
@@ -2704,7 +2713,7 @@ textarea {
           transform: rotate(135deg);
 }
 
-.diagram svg.level-1:nth-child(5) {
+.diagram svg.level-1:nth-child(4) {
   left: 51.8%;
   top: 57.3%;
   -webkit-transform: rotate(180deg);
@@ -2712,7 +2721,7 @@ textarea {
           transform: rotate(180deg);
 }
 
-.diagram svg.level-1:nth-child(6) {
+.diagram svg.level-1:nth-child(5) {
   left: 45%;
   top: 57.2%;
   -webkit-transform: rotate(225deg);
@@ -2720,7 +2729,7 @@ textarea {
           transform: rotate(225deg);
 }
 
-.diagram svg.level-1:nth-child(7) {
+.diagram svg.level-1:nth-child(6) {
   left: 40.3%;
   top: 51.8%;
   -webkit-transform: rotate(270deg);
@@ -2728,7 +2737,7 @@ textarea {
           transform: rotate(270deg);
 }
 
-.diagram svg.level-1:nth-child(8) {
+.diagram svg.level-1:nth-child(7) {
   left: 40.3%;
   top: 44.8%;
   -webkit-transform: rotate(315deg);
@@ -2996,6 +3005,36 @@ textarea {
   border-radius: 30px;
   overflow: hidden;
   font-size: 62px;
+}
+
+.anime-bg-box__bg-l:before,
+.anime-bg-box__bg-l:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4em;
+  height: 4em;
+  content: "☁";
+  mix-blend-mode: screen;
+  -webkit-animation: 44s -27s move infinite ease-in-out alternate;
+          animation: 44s -27s move infinite ease-in-out alternate;
+  color: transparent;
+}
+
+.anime-bg-box__bg-l:before {
+  text-shadow: 0.0738853821em -0.1527652693em 7px rgba(0, 255, 13, 0.9), 2.0508482133em 1.0453940825em 7px rgba(255, 213, 0, 0.9), 0.1083666955em -0.1697149103em 7px rgba(144, 255, 0, 0.9), 1.5600947944em 0.9766658278em 7px rgba(183, 255, 0, 0.9), 1.0246898382em 0.5659917346em 7px rgba(255, 0, 63, 0.9), 2.4316910511em 1.2906844348em 7px rgba(138, 0, 255, 0.9), 1.7009870596em 0.851342691em 7px rgba(111, 0, 255, 0.9), 2.1923900263em 0.3071983257em 7px rgba(255, 0, 29, 0.9);
+  -webkit-animation-duration: 42s;
+          animation-duration: 42s;
+  -webkit-animation-delay: -23s;
+          animation-delay: -23s;
+}
+
+.anime-bg-box__bg-l:after {
+  text-shadow: 0.5378869146em 1.8213516829em 7px rgba(199, 0, 255, 0.9), 2.1857362661em 1.5766386835em 7px rgba(0, 143, 255, 0.9), 1.1554099378em 1.493367568em 7px rgba(0, 134, 255, 0.9), 0.7059341718em -0.0228797723em 7px rgba(0, 196, 255, 0.9), 0.1526310167em 1.1820648414em 7px rgba(0, 255, 6, 0.9), 1.6083845191em 0.207029528em 7px rgba(0, 255, 86, 0.9), 0.8597798957em -0.023079545em 7px rgba(0, 232, 255, 0.9), 2.3285765714em 2.2264488704em 7px rgba(0, 11, 255, 0.9);
+  -webkit-animation-duration: 41s;
+          animation-duration: 41s;
+  -webkit-animation-delay: -19s;
+          animation-delay: -19s;
 }
 
 .anime-bg-box__body {
@@ -3766,6 +3805,13 @@ textarea {
   margin-bottom: 50px;
 }
 
+.diagram-info.row-reverse .diagram-info__body {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 .diagram-info__body {
   padding: 0px 100px;
 }
@@ -3854,6 +3900,22 @@ textarea {
   position: static;
 }
 
+.sidebar-list.dark {
+  border-color: #7899F4;
+}
+
+.sidebar-list.dark ul > li:before {
+  background-color: #858699;
+}
+
+.sidebar-list.dark ul > li > a {
+  color: #858699;
+}
+
+.sidebar-list__title {
+  margin-bottom: 20px;
+}
+
 .sidebar-list ul {
   font-weight: 600;
   font-size: 14px;
@@ -3875,6 +3937,7 @@ textarea {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  font-weight: 700;
 }
 
 .sidebar-list ul > li:before {
@@ -3924,6 +3987,75 @@ textarea {
 
 .h-bann .h-filter {
   margin-bottom: 30px;
+}
+
+.h-bann__comparison {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.h-bann__comparison-item {
+  margin-right: 30px;
+}
+
+.h-bann__comparison-label {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 5px;
+}
+
+.h-bann__comparison-title > span {
+  display: inline-block;
+  position: relative;
+  padding-right: 30px;
+}
+
+.h-bann__comparison-icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  height: 65px;
+  width: auto;
+  margin-left: 30px;
+}
+
+.h-bann__comparison-icon img {
+  height: 100%;
+  width: auto;
+}
+
+.label-sex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 0.5em;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
 }
 
 .user-label {
@@ -4337,6 +4469,202 @@ textarea {
           justify-content: flex-end;
 }
 
+.comparison-page .h-bann__body {
+  min-height: 494px;
+}
+
+.comparison {
+  margin-bottom: 50px;
+}
+
+.comparison__body {
+  padding: 0px 100px;
+}
+
+.comparison__title {
+  margin-bottom: 30px;
+}
+
+.comparison__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.comparison__top-col-2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 370px;
+          flex: 0 0 370px;
+}
+
+.comparison__character-list > li {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 40px rgba(174, 167, 188, 0.2);
+          box-shadow: 0px 4px 40px rgba(174, 167, 188, 0.2);
+  border-radius: 30px;
+  padding: 0 70px;
+}
+
+.comparison__character-list > li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.comparison__character-title {
+  cursor: pointer;
+  position: relative;
+  min-height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5em;
+  color: #53557e;
+  padding: 10px 0;
+  padding-right: 30px;
+}
+
+.comparison__character-title:before {
+  position: absolute;
+  font-family: "icomoon";
+  content: "";
+  font-weight: 300;
+  font-size: 0.6em;
+  top: 50%;
+  right: 0px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.comparison__character-title._active {
+  color: #5182cc;
+}
+
+.comparison__character-title._active:before {
+  -webkit-transform: translateY(-50%) scale(1, -1);
+      -ms-transform: translateY(-50%) scale(1, -1);
+          transform: translateY(-50%) scale(1, -1);
+}
+
+.comparison__character-text {
+  display: none;
+  padding-bottom: 50px;
+  height: 214px;
+}
+
+.comparison__character-text .simplebar-vertical {
+  right: -48px;
+}
+
+.target-compatibility {
+  margin-bottom: 50px;
+}
+
+.target-compatibility__body {
+  padding: 106px 100px;
+  color: #fff;
+}
+
+.target-compatibility__title {
+  margin-bottom: 30px;
+}
+
+.target-compatibility__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.target-compatibility__list > li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.target-compatibility__list-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #ffffff;
+  -webkit-filter: drop-shadow(0px 4px 40px rgba(174, 167, 188, 0.2));
+          filter: drop-shadow(0px 4px 40px rgba(174, 167, 188, 0.2));
+  border-radius: 30px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #fff;
+  padding: 52px 20px 52px;
+  text-align: center;
+  height: 100%;
+}
+
+.target-compatibility__list-card-text {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.target-compatibility__list-card-icon {
+  height: 48px;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.target-compatibility__list-card-icon img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+
+.target-compatibility__list-card-title {
+  font-family: "Snell-Roundhand", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.2em;
+  margin-bottom: 0px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.target-compatibility__list-card-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 480px) {
+  .h-bann__comparison-item:first-child {
+    padding-right: 64px;
+    position: relative;
+  }
+}
+
 @media (min-width: 576px) {
   .hero__bottom-flex {
     display: -webkit-box;
@@ -4445,6 +4773,10 @@ textarea {
     color: #ffcf65;
   }
 
+  .diagram-info.row-reverse .diagram-info__col-1 {
+    margin-left: 30px;
+  }
+
   .diagram-info__body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4467,6 +4799,11 @@ textarea {
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 0;
+    margin-right: 30px;
+  }
+
+  .sidebar-list.dark ul > li > a:hover {
+    color: #53557E;
   }
 
   .sidebar-list ul > li > a:hover {
@@ -4486,6 +4823,48 @@ textarea {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     margin-right: 30px;
+  }
+
+  .comparison__top-col-1 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    margin-right: 30px;
+  }
+
+  .comparison__character-text .text-content {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    max-height: 315px;
+    height: 100%;
+  }
+
+  .comparison__character-text .simplebar-content {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+
+  .target-compatibility__list-card:hover {
+    -webkit-box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    color: rgba(133, 134, 153, 0.8);
+  }
+
+  .target-compatibility__list-card:hover .target-compatibility__list-card-title {
+    color: #36334F;
+  }
+
+  .target-compatibility__list-card:hover .target-compatibility__list-card-subtitle {
+    color: #FF8393;
   }
 }
 
@@ -4645,6 +5024,22 @@ textarea {
   .bg-wrap .anime-bg-box__body {
     padding: 50px 32.5px 50px;
   }
+
+  .comparison__body {
+    padding: 0px 32.5px;
+  }
+
+  .comparison__character-list > li {
+    padding: 0px 32.5px;
+  }
+
+  .comparison__character-text .simplebar-vertical {
+    right: -20px;
+  }
+
+  .target-compatibility__body {
+    padding: 50px 32.5px;
+  }
 }
 
 @media (max-width: 1267.98px) {
@@ -4658,6 +5053,12 @@ textarea {
 
   .compatibility-block__col-1 {
     margin-bottom: 70px;
+  }
+
+  .target-compatibility__list > li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 33.333%;
+            flex: 0 1 33.333%;
   }
 }
 
@@ -4781,6 +5182,32 @@ textarea {
   .single-zodiac-info-v2__col-2 {
     margin-bottom: 30px;
   }
+
+  .comparison__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .comparison__character-text {
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  .comparison__character-text .text-content {
+    overflow: auto;
+    max-height: 212px;
+  }
+
+  .target-compatibility__list > li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -4879,6 +5306,10 @@ textarea {
     padding: 30px 15px;
   }
 
+  .h-bann__comparison-title.title-1 {
+    font-size: 26px;
+  }
+
   .compatibility-block__info-box {
     padding: 30px 30px;
   }
@@ -4938,6 +5369,23 @@ textarea {
   .bg-wrap .anime-bg-box__body {
     padding: 30px 15px 30px;
   }
+
+  .comparison__body {
+    padding: 0px 15px;
+  }
+
+  .comparison__character-list > li {
+    padding: 0px 15px;
+  }
+
+  .comparison__character-title {
+    font-size: 16px;
+    min-height: 55px;
+  }
+
+  .target-compatibility__body {
+    padding: 30px 15px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -4956,6 +5404,12 @@ textarea {
 
   .h-filter {
     padding: 30px 15px 30px;
+  }
+
+  .target-compatibility__list > li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
 
@@ -5004,6 +5458,18 @@ textarea {
 
   .sidebar-list {
     padding: 30px 15px;
+  }
+
+  .h-bann__comparison {
+    display: block;
+  }
+
+  .h-bann__comparison-item:first-child {
+    margin-bottom: 20px;
+  }
+
+  .h-bann__comparison-icon {
+    display: none;
   }
 
   .compatibility-block__body {

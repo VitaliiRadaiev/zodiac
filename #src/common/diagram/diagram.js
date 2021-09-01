@@ -141,6 +141,12 @@
             let colors = diagram.dataset.diagramColors.split(',');
             let tooltipText = diagram.dataset.diagramText.split(',');
 
+            if(diagram.classList.contains('reverse')) {
+                values = values.reverse();
+                colors = colors.reverse();
+                tooltipText = tooltipText.reverse();
+            }
+
             setHeight(diagram);
 
             setItems(values, diagram, svgDiagrams);
@@ -174,6 +180,16 @@
                     let y = tooltipPositionValues.values[index].y / diagram.clientWidth * 100;
                     setPositionTooltip(tooltip, x, y);
                     sevValueTooltip(tooltip, colors[index], tooltipText[index], values[index]);
+                },
+
+                getItemValue: (index) => {
+                    return values[index];
+                },
+                getItemText: (index) => {
+                    return tooltipText[index];
+                },
+                getColors: () => {
+                    return colors;
                 }
             }
         }

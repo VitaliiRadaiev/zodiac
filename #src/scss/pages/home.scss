@@ -50,6 +50,94 @@
     }
 }
 
+.h-bann {
+    &__comparison {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 36px;
+
+        @media (max-width: $md4+px) {
+            display: block;
+        }
+    }
+
+    &__comparison-item {
+        margin-right: 30px;
+
+
+
+        &:first-child {
+
+            @media (min-width: 480px) {
+                padding-right: 64px;
+                position: relative;
+    
+            }
+
+            @media (max-width: $md4+px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__comparison-label {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 5px;
+    }
+
+    &__comparison-title {
+        @media (max-width: $md3+px) {
+            &.title-1 {
+                font-size: 26px;
+
+            }
+        }
+        & > span {
+            display: inline-block;
+            position: relative;
+            padding-right: 30px;
+        }
+
+    }
+
+    &__comparison-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        height: 65px;
+        width: auto;
+        margin-left: 30px;
+
+        & img {
+            height: 100%;
+            width: auto;
+        }
+
+        @media (max-width: $md4+px) {
+            display: none;
+        }
+    }
+}
+
+.label-sex {
+    display: inline-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 0.5em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
 .user-label {
     display: flex;
     align-items: center;
@@ -150,7 +238,6 @@
     &__body {
         position: relative;
 
-
         @media (min-width: 1268px) {
             display: flex;
             min-height: 996px;
@@ -185,8 +272,6 @@
     }
 
     &__col-1 {
-
-
         @media (min-width: 1268px) {
             flex: 0 0 37.85%;
             margin-right: 30px;
@@ -201,8 +286,6 @@
     }
 
     &__col-2 {
-
-
         @media (min-width: 1268px) {
             flex: 1 1 auto;
             display: flex;
@@ -271,9 +354,6 @@
     border-radius: 50%;
 }
 
-
-
-
 .compatibility-table {
     display: flex;
     max-width: 851px;
@@ -281,8 +361,6 @@
     position: relative;
 
     @media (max-width: $md3+px) {
-        
-
         & .table-wrap {
             overflow: auto;
             width: 100%;
@@ -315,10 +393,9 @@
             left: 0;
             z-index: 2;
             background-color: #fafafd;
-            box-shadow: 30px 0 20px -20px rgba($textColor, 0.2);   
+            box-shadow: 30px 0 20px -20px rgba($textColor, 0.2);
         }
     }
-    
 
     & table {
         width: 100%;
@@ -335,14 +412,14 @@
             font-weight: 400;
             width: 8.333%;
             position: relative;
-  
+
             height: 100px;
             & a {
                 display: block;
                 transform: rotate(-90deg) translateY(-59%);
                 transform-origin: 0 0;
                 position: absolute;
-                transition: all .3s ease;
+                transition: all 0.3s ease;
                 color: #78859c;
                 text-align: left;
                 left: 50%;
@@ -360,7 +437,7 @@
             height: 60px;
             text-align: center;
             width: 8.333%;
-      
+
             & .dot {
                 display: inline-block;
             }
@@ -387,11 +464,10 @@
     }
 
     &__items {
-
         @media (min-width: 768px) {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;    
+            justify-content: space-between;
         }
 
         & .h-form__item {
@@ -416,10 +492,9 @@
             margin-bottom: 20px;
             flex: 1 1 auto;
             padding-right: 20px;
-
         }
 
-        & .h-form__submit  {
+        & .h-form__submit {
             margin-bottom: 20px;
         }
     }

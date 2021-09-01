@@ -1,5 +1,18 @@
 .diagram-info {
     margin-bottom: 50px;
+
+    &.row-reverse {
+        & .diagram-info__body {
+            flex-direction: row-reverse;
+        }
+
+        & .diagram-info__col-1 {
+            @media (min-width: 992px) {
+                margin-left: 30px;
+            }
+        }
+    }
+
     &__body {
         padding: 0px 100px;
         
@@ -27,6 +40,7 @@
             flex-direction: column;
             justify-content: center;
             margin-bottom: 0;
+            margin-right: 30px;
         }
     }
 

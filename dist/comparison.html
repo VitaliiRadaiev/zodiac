@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Zodiacs</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	<header class="header">
+    <div class="container">
+        <div class="header__body">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="logo">
+                </a>
+            </div>
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li>
+                        <a href="#" class="menu__link">
+                            <img src="img/icons/header-icon-1.svg" alt="">
+                            Совместимость по знакам
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">
+                            <img src="img/icons/header-icon-2.svg" alt="">
+                            Совместимость по дате
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">
+                            <img src="img/icons/header-icon-3.svg" alt="">
+                            Знаки зодиака
+                        </a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#" class="menu__link children-item current-menu-item">
+                            <img src="img/icons/header-icon-4.svg" alt="">
+                            Совместимость по гороскопу
+                        </a>
+                        <div class="sub-menu-wrap">
+                            <ul class="sub-menu" data-scroll>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Lorem, ipsum dolor.</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Rado</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Longines</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Tissot</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Balmain</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Certina</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Calvin Klein</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Omega</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Rado</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Longines</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Tissot</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Balmain</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Certina</a>
+                                </li>
+                                <li>
+                                    <a class="sub-menu__link" href="#">Calvin Klein</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <form class="header__search">
+                <div class="header__search-wrap">
+                    <input type="text" class="header__search-input" placeholder="Поиск по сайту">
+                    <button type="submit" class="header__search-submit">
+                        <img src="img/icons/search.svg" alt="">
+                    </button>
+                </div>
+            </form>
+            <div class="header__search-mobile-trigger">
+                <img src="img/icons/search.svg" alt="">
+            </div>
+            <div class="header__language">
+                <div class="header__language-title children-item">
+                    <img src="img/icons/flag-ru.svg" alt="">
+                    Rus
+                </div>
+                <div class="sub-menu-wrap">
+                    <ul class="sub-menu">
+                        <li>
+                            <a class="sub-menu__link" href="#"><img src="img/icons/flag-pl.svg" alt="">Pl</a>
+                        </li>
+                        <li>
+                            <a class="sub-menu__link" href="#"><img src="img/icons/flag-uk.svg" alt="">En</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__burger">
+                <div class="burger-wrap">
+                    <div class="burger" data-activEl="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+	<!-- == // TOP LINE ================== -->
+
+
+	<main class="_page comparison-page _padding-top">
+		<section class="h-bann">
+			<div class="container">
+				<div class="anime-bg-box">
+					<div class="anime-bg-box__bg">
+						<span></span>
+						<div class="anime-bg-box__bg-l"></div>
+					</div>
+					<div class="anime-bg-box__body h-bann__body">
+						<div class="h-bann__head">
+							<div class="h-bann__comparison">
+                                <div class="h-bann__comparison-item">
+                                    <div class="h-bann__comparison-label">Знаки:</div>
+                                    <div class="h-bann__comparison-title title-1">
+                                        <span>Овен<span class="label-sex" style="color: #5182CC;">м</span></span> и <span>Овен<span class="label-sex" style="color: #FF554D;">ж</span></span>
+                                    </div>
+                                    <div class="h-bann__comparison-icon">
+                                        <img src="img/icons/dabble-arrows.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="h-bann__comparison-item">
+                                    <div class="h-bann__comparison-label">Совместимость:</div>
+                                    <div class="h-bann__comparison-title title-1">
+                                        75%
+                                    </div>
+                                </div>
+                            </div>
+							<div class="user-label">
+								<div class="user-label__photo">
+									<div class="user-label__is-activity" style="background-color: #87C259;"></div>
+									<div class="user-label__photo-wrap ibg">
+										<img src="img/photo/user-photo.jpg" alt="">
+									</div>
+								</div>
+								<div class="user-label__text-wrap">
+									<div class="user-label__name">Esther Howard</div>
+									<div class="user-label__position">Астролог, автор статьи</div>
+								</div>
+								<a href="#" class="user-label__send-btn">
+									<img class="img-svg" src="img/icons/send.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<form action="#" class="h-filter h-form">
+							<div class="h-filter__col h-filter__col-1 h-form__item">
+
+								<div class="h-form__label">Мужчина</div>
+								<div class="select-wrap">
+									<select name="" class="_select">
+										<option value="1" data-img-url="img/icons/oven.svg" selected>Овет</option>
+										<option value="2" data-img-url="img/icons/bliznecy.svg">Телец</option>
+										<option value="3" data-img-url="img/icons/oven.svg">Близнецы</option>
+										<option value="4" data-img-url="img/icons/oven.svg">Рак</option>
+										<option value="5" data-img-url="img/icons/bliznecy.svg">Лев</option>
+										<option value="6" data-img-url="img/icons/oven.svg">Дева</option>
+										<option value="7" data-img-url="img/icons/oven.svg">Весы</option>
+										<option value="8" data-img-url="img/icons/bliznecy.svg">Скорпион</option>
+										<option value="9" data-img-url="img/icons/oven.svg">Стрелец</option>
+										<option value="10" data-img-url="img/icons/oven.svg">Козерог</option>
+										<option value="11" data-img-url="img/icons/bliznecy.svg">Водолей</option>
+										<option value="12" data-img-url="img/icons/oven.svg">Рыбы</option>
+									</select>
+								</div>
+
+							</div>
+							<div class="h-filter__col h-filter__col-2 h-form__item">
+
+								<div class="h-form__label">Женщина</div>
+								<div class="select-wrap">
+									<select name="" class="_select">
+										<option value="1" data-img-url="img/icons/oven.svg" selected>Овет</option>
+										<option value="2" data-img-url="img/icons/bliznecy.svg">Телец</option>
+										<option value="3" data-img-url="img/icons/oven.svg">Близнецы</option>
+										<option value="4" data-img-url="img/icons/oven.svg">Рак</option>
+										<option value="5" data-img-url="img/icons/bliznecy.svg">Лев</option>
+										<option value="6" data-img-url="img/icons/oven.svg">Дева</option>
+										<option value="7" data-img-url="img/icons/oven.svg">Весы</option>
+										<option value="8" data-img-url="img/icons/bliznecy.svg">Скорпион</option>
+										<option value="9" data-img-url="img/icons/oven.svg">Стрелец</option>
+										<option value="10" data-img-url="img/icons/oven.svg">Козерог</option>
+										<option value="11" data-img-url="img/icons/bliznecy.svg">Водолей</option>
+										<option value="12" data-img-url="img/icons/oven.svg">Рыбы</option>
+									</select>
+								</div>
+
+							</div>
+							<div class="h-filter__col h-filter__col-3 h-form__item">
+
+								<div class="h-form__label">Цель</div>
+								<div class="select-wrap">
+									<select name="" class="_select">
+										<option value="1" data-img-url="img/icons/heart.svg" selected>Любовь</option>
+										<option value="2" data-img-url="img/icons/oven.svg">Дружба</option>
+										<option value="3" data-img-url="img/icons/oven.svg">Секс</option>
+										<option value="3" data-img-url="img/icons/oven.svg">Работа</option>
+									</select>
+								</div>
+
+							</div>
+							<div class="h-filter__col h-filter__col-4 h-form__item">
+
+								<button type="submit" class="h-form__submit btn-default"><span>Узнать совместимость</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="comparison">
+			<div class="container">
+				<div class="comparison__body">
+					<div class="comparison__top">
+						<div class="comparison__top-col-1">
+							<div class="single-zodiac-info-card">
+								<div class="single-zodiac-info-card__label">
+									<img src="img/icons/card-icon-1.svg" alt="">
+								</div>
+								<div class="single-zodiac-info-card__title title-3">ВСТРЕЧА ДВУХ СТРАСТНЫХ НАТУР ГАРАНТИРУЕТ ЯРКИЙ И ЭМОЦИОНАЛЬНЫЙ РОМАН.
+								</div>
+								<div class="single-zodiac-info-card__text text-content" data-scroll>
+									<p>
+										Отношения двух представителей знака Овен всегда отличаются накалом страстей. Взаимное притяжение возникает уже при первой встрече и со временем продолжает расти. Овны поглощены друг другом и не видят никого вокруг. Эмоции в такой паре зашкаливают. Подобные страстные союзы не всегда могут перерасти в нечто более прочное и глубокое. Связь между двумя Овнами зачастую так и ограничивается непродолжительным ярким романом. Чтобы создать более крепкие отношения, понадобится постараться обоим партнерам. Соединение двух представителей одного знака зодиака всегда непредсказуемо, ведь людям с одинаковыми характерами порой невозможно ужиться вместе.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="comparison__top-col-2">
+							<div class="sidebar-list dark">
+								<h4 class="sidebar-list__title title-4">
+									Навигация
+								</h4>
+								<ul>
+									<li>
+										<a href="#block-1" class="anchor">
+											Описание взаимоотношения знаков зодиака
+										</a>
+									</li>
+									<li>
+										<a href="#block-2" class="anchor">
+											Сравнение характеристик
+										</a>
+									</li>
+									<li>
+										<a href="#block-3" class="anchor">
+											Сравнение характеров
+										</a>
+									</li>
+									<li>
+										<a href="#block-4" class="anchor">
+											Другие совместимости
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+			
+				</div>
+			</div>
+		</section>
+		<section class="diagram-info">
+			<div class="container">
+				<div class="diagram-info__body">
+					<div class="diagram-info__col-1">
+						<div class="single-zodiac-info-card">
+							<div class="single-zodiac-info-card__label">
+								<img src="img/icons/card-icon-12.svg" alt="">
+							</div>
+							<div class="single-zodiac-info-card__title title-3">Характеристики знака Овен мужчина</div>
+							<div class="single-zodiac-info-card__text text-content">
+								<ul class="compatibility-block__info-box-list">
+									<li>
+										<div class="dot" style="background-color: #AADF80;"></div>
+										Влюбчивость
+									</li>
+									<li>
+										<div class="dot" style="background-color: #83ACE9;"></div>
+										Доброта
+									</li>
+									<li>
+										<div class="dot" style="background-color: #FF5C7C;"></div>
+										Здоровье
+									</li>
+									<li>
+										<div class="dot" style="background-color: #AADF80;"></div>
+										Успешность
+									</li>
+									<li>
+										<div class="dot" style="background-color: #83ACE9;"></div>
+										Самоотдача
+									</li>
+									<li>
+										<div class="dot" style="background-color: #FF5C7C;"></div>
+										Терпимость
+									</li>
+									<li>
+										<div class="dot" style="background-color: #83ACE9;"></div>
+										Ревнивость
+									</li>
+									<li>
+										<div class="dot" style="background-color: #FF5C7C;"></div>
+										Общительность
+									</li>
+								</ul>
+							</div>
+							<div class="single-zodiac-info-card__title title-3"><span class="diagram-text">Влюбчивость</span> <span class="diagram-value">9</span>/10
+							</div>
+							<div class="diagram-info-slider swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+								</div>
+								<div class="swiper-pagination" data-dots-colors="#FFCF65,#60C6FF,#FF856A,#7297FF,#6FCF97,#B592FF,#ED9CEF,#2F80ED"></div>
+							</div>
+						</div>
+					</div>
+					<div class="diagram-info__col-2">
+						<div class="diagram _anim-no-hide" data-diagram-values="10,10,8,10,10,2,4,10"
+							data-diagram-colors="#60C6FF,#FF856A,#7297FF,#6FCF97,#B592FF,#ED9CEF,#2F80ED,#FFCF65"
+							data-diagram-text="Общительность,Влюбчивость,Доброта,Здоровье,Успешность,Самоотдача,Терпимость,Ревнивость">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="diagram-info row-reverse">
+			<div class="container">
+				<div class="diagram-info__body">
+					<div class="diagram-info__col-1">
+						<div class="single-zodiac-info-card">
+							<div class="single-zodiac-info-card__label">
+								<img src="img/icons/card-icon-12.svg" alt="">
+							</div>
+							<div class="single-zodiac-info-card__title title-3">Характеристики знака Стрелец женщина</div>
+							<div class="single-zodiac-info-card__text text-content">
+								<ul class="compatibility-block__info-box-list">
+									<li>
+										<div class="dot" style="background-color: #AADF80;"></div>
+										Влюбчивость
+									</li>
+									<li>
+										<div class="dot" style="background-color: #83ACE9;"></div>
+										Доброта
+									</li>
+									<li>
+										<div class="dot" style="background-color: #FF5C7C;"></div>
+										Здоровье
+									</li>
+									<li>
+										<div class="dot" style="background-color: #AADF80;"></div>
+										Успешность
+									</li>
+									<li>
+										<div class="dot" style="background-color: #83ACE9;"></div>
+										Самоотдача
+									</li>
+									<li>
+										<div class="dot" style="background-color: #FF5C7C;"></div>
+										Терпимость
+									</li>
+									<li>
+										<div class="dot" style="background-color: #83ACE9;"></div>
+										Ревнивость
+									</li>
+									<li>
+										<div class="dot" style="background-color: #FF5C7C;"></div>
+										Общительность
+									</li>
+								</ul>
+							</div>
+							<div class="single-zodiac-info-card__title title-3"><span class="diagram-text">Влюбчивость</span> <span class="diagram-value">9</span>/10
+							</div>
+							<div class="diagram-info-slider swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+									<div class="swiper-slide text-content">
+										Стрелец — влюбчивый знак, однако он слишком непостоянный и ветреный. В период
+										влюбленности ведет себя как идеал любой женщины — готов реально носить партнершу
+										на руках в прямом и переносном смысле. При этом о совместном будущем совсем не
+										задумывается.
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+					<div class="diagram-info__col-2">
+						<div class="diagram reverse _anim-no-hide" data-diagram-values="10,10,8,10,10,2,4,10"
+						data-diagram-colors="#60C6FF,#FF856A,#7297FF,#6FCF97,#B592FF,#ED9CEF,#2F80ED,#FFCF65"
+							data-diagram-text="Общительность,Влюбчивость,Доброта,Здоровье,Успешность,Самоотдача,Терпимость,Ревнивость">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="comparison">
+			<div class="container">
+				<div class="comparison__body">
+					<div class="comparison__character">
+						<h2 class="comparison__title title-2">Сравнение характеров</h2>
+						<ul class="comparison__character-list _spollers">
+							<li>
+								<div class="comparison__character-title _spoller">
+									В любви
+								</div>
+								<div class="comparison__character-text" >
+									<div class="text-content" data-scroll>
+										<h3>Овен (м) в работе</h3>
+										<p>
+											Для Овна не существует такой работы, в которой бы он не показал хороших результатов. Мужчины этого знака целеустремленны и настойчивы. Прирожденные лидеры часто добиваются успехов в профессиональной деятельности. Идеальной для Овна будет руководящая должность, ведь он действительно может привести команду к результату. Идеальная сфера деятельности для огненного знака — бизнес. Их энергия, сила и работоспособность приведет к успеху любые начинания. Среди мужских профессий идеальными для Овна станут пожарные, полицейские, военные и спортсмены.
+										</p>
+	
+										<h3>Овен (ж) в работе</h3>
+										<p>
+											Карьера для Овна — это все. Для достижения поставленной цели она может не только пройтись по головам, но и срубить парочку. Лидер внутри такой женщины не сможет долго скрываться и рано или поздно выйдет в той или иной форме.
+										</p>
+										<p>
+											С детства девочка-Овен очень амбициозна, знает чего хочет достичь и делает для этого все возможное. При желании стать балериной, начнет бесконечно худеть и танцевать с утра до вечера, чтобы непременно быть лучшей. Овны любят конкуренцию, которая положительно влияет на их работоспособность и толкает вперед.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="comparison__character-title _spoller">
+									В сексе
+								</div>
+								<div class="comparison__character-text" >
+									<div class="text-content" data-scroll>
+										<h3>Овен (м) в работе</h3>
+										<p>
+											Для Овна не существует такой работы, в которой бы он не показал хороших результатов. Мужчины этого знака целеустремленны и настойчивы. Прирожденные лидеры часто добиваются успехов в профессиональной деятельности. Идеальной для Овна будет руководящая должность, ведь он действительно может привести команду к результату. Идеальная сфера деятельности для огненного знака — бизнес. Их энергия, сила и работоспособность приведет к успеху любые начинания. Среди мужских профессий идеальными для Овна станут пожарные, полицейские, военные и спортсмены.
+										</p>
+	
+										<h3>Овен (ж) в работе</h3>
+										<p>
+											Карьера для Овна — это все. Для достижения поставленной цели она может не только пройтись по головам, но и срубить парочку. Лидер внутри такой женщины не сможет долго скрываться и рано или поздно выйдет в той или иной форме.
+										</p>
+										<p>
+											С детства девочка-Овен очень амбициозна, знает чего хочет достичь и делает для этого все возможное. При желании стать балериной, начнет бесконечно худеть и танцевать с утра до вечера, чтобы непременно быть лучшей. Овны любят конкуренцию, которая положительно влияет на их работоспособность и толкает вперед.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="comparison__character-title _spoller">
+									В дружбе
+								</div>
+								<div class="comparison__character-text" >
+									<div class="text-content" data-scroll>
+										<h3>Овен (м) в работе</h3>
+										<p>
+											Для Овна не существует такой работы, в которой бы он не показал хороших результатов. Мужчины этого знака целеустремленны и настойчивы. Прирожденные лидеры часто добиваются успехов в профессиональной деятельности. Идеальной для Овна будет руководящая должность, ведь он действительно может привести команду к результату. Идеальная сфера деятельности для огненного знака — бизнес. Их энергия, сила и работоспособность приведет к успеху любые начинания. Среди мужских профессий идеальными для Овна станут пожарные, полицейские, военные и спортсмены.
+										</p>
+	
+										<h3>Овен (ж) в работе</h3>
+										<p>
+											Карьера для Овна — это все. Для достижения поставленной цели она может не только пройтись по головам, но и срубить парочку. Лидер внутри такой женщины не сможет долго скрываться и рано или поздно выйдет в той или иной форме.
+										</p>
+										<p>
+											С детства девочка-Овен очень амбициозна, знает чего хочет достичь и делает для этого все возможное. При желании стать балериной, начнет бесконечно худеть и танцевать с утра до вечера, чтобы непременно быть лучшей. Овны любят конкуренцию, которая положительно влияет на их работоспособность и толкает вперед.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="comparison__character-title _spoller">
+									В работе
+								</div>
+								<div class="comparison__character-text" >
+									<div class="text-content" data-scroll>
+										<h3>Овен (м) в работе</h3>
+										<p>
+											Для Овна не существует такой работы, в которой бы он не показал хороших результатов. Мужчины этого знака целеустремленны и настойчивы. Прирожденные лидеры часто добиваются успехов в профессиональной деятельности. Идеальной для Овна будет руководящая должность, ведь он действительно может привести команду к результату. Идеальная сфера деятельности для огненного знака — бизнес. Их энергия, сила и работоспособность приведет к успеху любые начинания. Среди мужских профессий идеальными для Овна станут пожарные, полицейские, военные и спортсмены.
+										</p>
+	
+										<h3>Овен (ж) в работе</h3>
+										<p>
+											Карьера для Овна — это все. Для достижения поставленной цели она может не только пройтись по головам, но и срубить парочку. Лидер внутри такой женщины не сможет долго скрываться и рано или поздно выйдет в той или иной форме.
+										</p>
+										<p>
+											С детства девочка-Овен очень амбициозна, знает чего хочет достичь и делает для этого все возможное. При желании стать балериной, начнет бесконечно худеть и танцевать с утра до вечера, чтобы непременно быть лучшей. Овны любят конкуренцию, которая положительно влияет на их работоспособность и толкает вперед.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="comparison__character-title _spoller">
+									Можно ли доверть
+								</div>
+								<div class="comparison__character-text" >
+									<div class="text-content" data-scroll>
+										<h3>Овен (м) в работе</h3>
+										<p>
+											Для Овна не существует такой работы, в которой бы он не показал хороших результатов. Мужчины этого знака целеустремленны и настойчивы. Прирожденные лидеры часто добиваются успехов в профессиональной деятельности. Идеальной для Овна будет руководящая должность, ведь он действительно может привести команду к результату. Идеальная сфера деятельности для огненного знака — бизнес. Их энергия, сила и работоспособность приведет к успеху любые начинания. Среди мужских профессий идеальными для Овна станут пожарные, полицейские, военные и спортсмены.
+										</p>
+	
+										<h3>Овен (ж) в работе</h3>
+										<p>
+											Карьера для Овна — это все. Для достижения поставленной цели она может не только пройтись по головам, но и срубить парочку. Лидер внутри такой женщины не сможет долго скрываться и рано или поздно выйдет в той или иной форме.
+										</p>
+										<p>
+											С детства девочка-Овен очень амбициозна, знает чего хочет достичь и делает для этого все возможное. При желании стать балериной, начнет бесконечно худеть и танцевать с утра до вечера, чтобы непременно быть лучшей. Овны любят конкуренцию, которая положительно влияет на их работоспособность и толкает вперед.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="comparison__character-title _spoller">
+									Свидание
+								</div>
+								<div class="comparison__character-text" >
+									<div class="text-content" data-scroll>
+										<h3>Овен (м) в работе</h3>
+										<p>
+											Для Овна не существует такой работы, в которой бы он не показал хороших результатов. Мужчины этого знака целеустремленны и настойчивы. Прирожденные лидеры часто добиваются успехов в профессиональной деятельности. Идеальной для Овна будет руководящая должность, ведь он действительно может привести команду к результату. Идеальная сфера деятельности для огненного знака — бизнес. Их энергия, сила и работоспособность приведет к успеху любые начинания. Среди мужских профессий идеальными для Овна станут пожарные, полицейские, военные и спортсмены.
+										</p>
+	
+										<h3>Овен (ж) в работе</h3>
+										<p>
+											Карьера для Овна — это все. Для достижения поставленной цели она может не только пройтись по головам, но и срубить парочку. Лидер внутри такой женщины не сможет долго скрываться и рано или поздно выйдет в той или иной форме.
+										</p>
+										<p>
+											С детства девочка-Овен очень амбициозна, знает чего хочет достичь и делает для этого все возможное. При желании стать балериной, начнет бесконечно худеть и танцевать с утра до вечера, чтобы непременно быть лучшей. Овны любят конкуренцию, которая положительно влияет на их работоспособность и толкает вперед.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="comparison__character-title _spoller">
+									Что любит и не любит
+								</div>
+								<div class="comparison__character-text" >
+									<div class="text-content" data-scroll>
+										<h3>Овен (м) в работе</h3>
+										<p>
+											Для Овна не существует такой работы, в которой бы он не показал хороших результатов. Мужчины этого знака целеустремленны и настойчивы. Прирожденные лидеры часто добиваются успехов в профессиональной деятельности. Идеальной для Овна будет руководящая должность, ведь он действительно может привести команду к результату. Идеальная сфера деятельности для огненного знака — бизнес. Их энергия, сила и работоспособность приведет к успеху любые начинания. Среди мужских профессий идеальными для Овна станут пожарные, полицейские, военные и спортсмены.
+										</p>
+	
+										<h3>Овен (ж) в работе</h3>
+										<p>
+											Карьера для Овна — это все. Для достижения поставленной цели она может не только пройтись по головам, но и срубить парочку. Лидер внутри такой женщины не сможет долго скрываться и рано или поздно выйдет в той или иной форме.
+										</p>
+										<p>
+											С детства девочка-Овен очень амбициозна, знает чего хочет достичь и делает для этого все возможное. При желании стать балериной, начнет бесконечно худеть и танцевать с утра до вечера, чтобы непременно быть лучшей. Овны любят конкуренцию, которая положительно влияет на их работоспособность и толкает вперед.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="comparison__character-title _spoller">
+									Что можно подарить 
+								</div>
+								<div class="comparison__character-text" >
+									<div class="text-content" data-scroll>
+										<h3>Овен (м) в работе</h3>
+										<p>
+											Для Овна не существует такой работы, в которой бы он не показал хороших результатов. Мужчины этого знака целеустремленны и настойчивы. Прирожденные лидеры часто добиваются успехов в профессиональной деятельности. Идеальной для Овна будет руководящая должность, ведь он действительно может привести команду к результату. Идеальная сфера деятельности для огненного знака — бизнес. Их энергия, сила и работоспособность приведет к успеху любые начинания. Среди мужских профессий идеальными для Овна станут пожарные, полицейские, военные и спортсмены.
+										</p>
+	
+										<h3>Овен (ж) в работе</h3>
+										<p>
+											Карьера для Овна — это все. Для достижения поставленной цели она может не только пройтись по головам, но и срубить парочку. Лидер внутри такой женщины не сможет долго скрываться и рано или поздно выйдет в той или иной форме.
+										</p>
+										<p>
+											С детства девочка-Овен очень амбициозна, знает чего хочет достичь и делает для этого все возможное. При желании стать балериной, начнет бесконечно худеть и танцевать с утра до вечера, чтобы непременно быть лучшей. Овны любят конкуренцию, которая положительно влияет на их работоспособность и толкает вперед.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="comparison__character-title _spoller">
+									Отношение к семье и детям
+								</div>
+								<div class="comparison__character-text" >
+									<div class="text-content" data-scroll>
+										<h3>Овен (м) в работе</h3>
+										<p>
+											Для Овна не существует такой работы, в которой бы он не показал хороших результатов. Мужчины этого знака целеустремленны и настойчивы. Прирожденные лидеры часто добиваются успехов в профессиональной деятельности. Идеальной для Овна будет руководящая должность, ведь он действительно может привести команду к результату. Идеальная сфера деятельности для огненного знака — бизнес. Их энергия, сила и работоспособность приведет к успеху любые начинания. Среди мужских профессий идеальными для Овна станут пожарные, полицейские, военные и спортсмены.
+										</p>
+	
+										<h3>Овен (ж) в работе</h3>
+										<p>
+											Карьера для Овна — это все. Для достижения поставленной цели она может не только пройтись по головам, но и срубить парочку. Лидер внутри такой женщины не сможет долго скрываться и рано или поздно выйдет в той или иной форме.
+										</p>
+										<p>
+											С детства девочка-Овен очень амбициозна, знает чего хочет достичь и делает для этого все возможное. При желании стать балериной, начнет бесконечно худеть и танцевать с утра до вечера, чтобы непременно быть лучшей. Овны любят конкуренцию, которая положительно влияет на их работоспособность и толкает вперед.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="comparison__character-title _spoller">
+									Каких женщин или мужчин предпочитает
+								</div>
+								<div class="comparison__character-text" >
+									<div class="text-content" data-scroll>
+										<h3>Овен (м) в работе</h3>
+										<p>
+											Для Овна не существует такой работы, в которой бы он не показал хороших результатов. Мужчины этого знака целеустремленны и настойчивы. Прирожденные лидеры часто добиваются успехов в профессиональной деятельности. Идеальной для Овна будет руководящая должность, ведь он действительно может привести команду к результату. Идеальная сфера деятельности для огненного знака — бизнес. Их энергия, сила и работоспособность приведет к успеху любые начинания. Среди мужских профессий идеальными для Овна станут пожарные, полицейские, военные и спортсмены.
+										</p>
+	
+										<h3>Овен (ж) в работе</h3>
+										<p>
+											Карьера для Овна — это все. Для достижения поставленной цели она может не только пройтись по головам, но и срубить парочку. Лидер внутри такой женщины не сможет долго скрываться и рано или поздно выйдет в той или иной форме.
+										</p>
+										<p>
+											С детства девочка-Овен очень амбициозна, знает чего хочет достичь и делает для этого все возможное. При желании стать балериной, начнет бесконечно худеть и танцевать с утра до вечера, чтобы непременно быть лучшей. Овны любят конкуренцию, которая положительно влияет на их работоспособность и толкает вперед.
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="comparison__character-title _spoller">
+									Характер
+								</div>
+								<div class="comparison__character-text" >
+									<div class="text-content" data-scroll>
+										<h3>Овен (м) в работе</h3>
+										<p>
+											Для Овна не существует такой работы, в которой бы он не показал хороших результатов. Мужчины этого знака целеустремленны и настойчивы. Прирожденные лидеры часто добиваются успехов в профессиональной деятельности. Идеальной для Овна будет руководящая должность, ведь он действительно может привести команду к результату. Идеальная сфера деятельности для огненного знака — бизнес. Их энергия, сила и работоспособность приведет к успеху любые начинания. Среди мужских профессий идеальными для Овна станут пожарные, полицейские, военные и спортсмены.
+										</p>
+	
+										<h3>Овен (ж) в работе</h3>
+										<p>
+											Карьера для Овна — это все. Для достижения поставленной цели она может не только пройтись по головам, но и срубить парочку. Лидер внутри такой женщины не сможет долго скрываться и рано или поздно выйдет в той или иной форме.
+										</p>
+										<p>
+											С детства девочка-Овен очень амбициозна, знает чего хочет достичь и делает для этого все возможное. При желании стать балериной, начнет бесконечно худеть и танцевать с утра до вечера, чтобы непременно быть лучшей. Овны любят конкуренцию, которая положительно влияет на их работоспособность и толкает вперед.
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+			
+				</div>
+			</div>
+		</section>
+
+		<section class="target-compatibility">
+			<div class="container">
+				<div class="anime-bg-box">
+					<div class="anime-bg-box__bg">
+						<span></span>
+						<div class="anime-bg-box__bg-l"></div>
+					</div>
+					<div class="anime-bg-box__body target-compatibility__body">
+						<h2 class="target-compatibility__title title-2">Совместимость по цели</h2>
+						<ul class="target-compatibility__list">
+							<li>
+								<a href="#" class="target-compatibility__list-card">
+									<div class="target-compatibility__list-card-text">
+										(Совместимость Рыбы (м) и Овна (ж) в Сексуальных отношениях)
+									</div>
+									<div class="target-compatibility__list-card-icon">
+										<img src="img/icons/z-aries.svg" alt="">
+									</div>
+									<div class="target-compatibility__list-card-title">
+										Овен
+									</div>
+									<div class="target-compatibility__list-card-subtitle">
+										90% совместимость
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="target-compatibility__list-card">
+									<div class="target-compatibility__list-card-text">
+										(Совместимость Рыбы (м) и Овна (ж) в Сексуальных отношениях)
+									</div>
+									<div class="target-compatibility__list-card-icon">
+										<img src="img/icons/z-taurus.svg" alt="">
+									</div>
+									<div class="target-compatibility__list-card-title">
+										Телец
+									</div>
+									<div class="target-compatibility__list-card-subtitle">
+										90% совместимость
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="target-compatibility__list-card">
+									<div class="target-compatibility__list-card-text">
+										(Совместимость Рыбы (м) и Овна (ж) в Сексуальных отношениях)
+									</div>
+									<div class="target-compatibility__list-card-icon">
+										<img src="img/icons/z-gemini.svg" alt="">
+									</div>
+									<div class="target-compatibility__list-card-title">
+										Близнецы 
+									</div>
+									<div class="target-compatibility__list-card-subtitle">
+										90% совместимость
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="target-compatibility__list-card">
+									<div class="target-compatibility__list-card-text">
+										(Совместимость Рыбы (м) и Овна (ж) в Сексуальных отношениях)
+									</div>
+									<div class="target-compatibility__list-card-icon">
+										<img src="img/icons/z-cancer.svg" alt="">
+									</div>
+									<div class="target-compatibility__list-card-title">
+										Рак 
+									</div>
+									<div class="target-compatibility__list-card-subtitle">
+										90% совместимость
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="target-compatibility__list-card">
+									<div class="target-compatibility__list-card-text">
+										(Совместимость Рыбы (м) и Овна (ж) в Сексуальных отношениях)
+									</div>
+									<div class="target-compatibility__list-card-icon">
+										<img src="img/icons/z-leo.svg" alt="">
+									</div>
+									<div class="target-compatibility__list-card-title">
+										Лев 
+									</div>
+									<div class="target-compatibility__list-card-subtitle">
+										90% совместимость
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="target-compatibility__list-card">
+									<div class="target-compatibility__list-card-text">
+										(Совместимость Рыбы (м) и Овна (ж) в Сексуальных отношениях)
+									</div>
+									<div class="target-compatibility__list-card-icon">
+										<img src="img/icons/z-virgo.svg" alt="">
+									</div>
+									<div class="target-compatibility__list-card-title">
+										Дева 
+									</div>
+									<div class="target-compatibility__list-card-subtitle">
+										90% совместимость
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="target-compatibility__list-card">
+									<div class="target-compatibility__list-card-text">
+										(Совместимость Рыбы (м) и Овна (ж) в Сексуальных отношениях)
+									</div>
+									<div class="target-compatibility__list-card-icon">
+										<img src="img/icons/z-libra.svg" alt="">
+									</div>
+									<div class="target-compatibility__list-card-title">
+										Весы 
+									</div>
+									<div class="target-compatibility__list-card-subtitle">
+										90% совместимость
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="target-compatibility__list-card">
+									<div class="target-compatibility__list-card-text">
+										(Совместимость Рыбы (м) и Овна (ж) в Сексуальных отношениях)
+									</div>
+									<div class="target-compatibility__list-card-icon">
+										<img src="img/icons/z-scorpio.svg" alt="">
+									</div>
+									<div class="target-compatibility__list-card-title">
+										Скорпион 
+									</div>
+									<div class="target-compatibility__list-card-subtitle">
+										90% совместимость
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="target-compatibility__list-card">
+									<div class="target-compatibility__list-card-text">
+										(Совместимость Рыбы (м) и Овна (ж) в Сексуальных отношениях)
+									</div>
+									<div class="target-compatibility__list-card-icon">
+										<img src="img/icons/z-sagittarius.svg" alt="">
+									</div>
+									<div class="target-compatibility__list-card-title">
+										Стрелец 
+									</div>
+									<div class="target-compatibility__list-card-subtitle">
+										90% совместимость
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="target-compatibility__list-card">
+									<div class="target-compatibility__list-card-text">
+										(Совместимость Рыбы (м) и Овна (ж) в Сексуальных отношениях)
+									</div>
+									<div class="target-compatibility__list-card-icon">
+										<img src="img/icons/z-capricorn.svg" alt="">
+									</div>
+									<div class="target-compatibility__list-card-title">
+										Козерог 
+									</div>
+									<div class="target-compatibility__list-card-subtitle">
+										90% совместимость
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="target-compatibility__list-card">
+									<div class="target-compatibility__list-card-text">
+										(Совместимость Рыбы (м) и Овна (ж) в Сексуальных отношениях)
+									</div>
+									<div class="target-compatibility__list-card-icon">
+										<img src="img/icons/z-aquarius.svg" alt="">
+									</div>
+									<div class="target-compatibility__list-card-title">
+										Водолей 
+									</div>
+									<div class="target-compatibility__list-card-subtitle">
+										90% совместимость
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="target-compatibility__list-card">
+									<div class="target-compatibility__list-card-text">
+										(Совместимость Рыбы (м) и Овна (ж) в Сексуальных отношениях)
+									</div>
+									<div class="target-compatibility__list-card-icon">
+										<img src="img/icons/z-pisces.svg" alt="">
+									</div>
+									<div class="target-compatibility__list-card-title">
+										Рыбы 
+									</div>
+									<div class="target-compatibility__list-card-subtitle">
+										90% совместимость
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="comments-block">
+			<div class="container-md">
+				<h2 class="comments-block__title title-2">
+					Последние комментарии
+				</h2>
+				<div class="comments-block__list">
+					<div class="comment-b">
+						<div class="comment-b__body">
+							<div class="comment-b__head">
+								<div class="comment-b__photo ibg">
+									<img src="img/photo/user-photo-2.jpg" alt="">
+								</div>
+								<div class="comment-b__wrap">
+									<div class="comment-b__name">Kristin Watson</div>
+									
+
+<div class="comment-b__rating rating-block">
+    <div class="rating-wrap">
+        <div class="rating ">
+            <div class="rating__line">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <div class="rating__activeline">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <input value="4" type="hidden" name="rating">
+            <div class="stars">
+                <span class="star"><i>Ужасно</i></span>
+                <span class="star"><i>Плохо</i></span>
+                <span class="star"><i>Нормально</i></span>
+                <span class="star"><i>Хорошо</i></span>
+                <span class="star"><i>Отлично</i></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="rating-value">5/5</div>
+    
+</div>
+								</div>
+								<div class="comment-b__date">01.02. 2021</div>
+							</div>
+							<div class="comment-b__text">
+								Ну не знаю . В это как то не особо верится. На практике увидела что не всё так как в таких гороскопах. С парнем у нас всё идеально, хотя в гороскепе написано что вообще близко не родня.
+							</div>
+							<a href="#" class="comment-b__reply">
+								<img src="img/icons/Chat.svg" alt="">
+								Ответить
+							</a>
+						</div>
+						<div class="comment-b">
+							<div class="comment-b__body">
+								<div class="comment-b__head">
+									<div class="comment-b__photo ibg">
+										<img src="img/photo/user-photo-2.jpg" alt="">
+									</div>
+									<div class="comment-b__wrap">
+										<div class="comment-b__name">Kristin Watson</div>
+										
+
+<div class="comment-b__rating rating-block">
+    <div class="rating-wrap">
+        <div class="rating ">
+            <div class="rating__line">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <div class="rating__activeline">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <input value="4" type="hidden" name="rating">
+            <div class="stars">
+                <span class="star"><i>Ужасно</i></span>
+                <span class="star"><i>Плохо</i></span>
+                <span class="star"><i>Нормально</i></span>
+                <span class="star"><i>Хорошо</i></span>
+                <span class="star"><i>Отлично</i></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="rating-value">5/5</div>
+    
+</div>
+									</div>
+									<div class="comment-b__date">01.02. 2021</div>
+								</div>
+								<div class="comment-b__text">
+									Ну не знаю . В это как то не особо верится. На практике увидела что не всё так как в таких гороскопах. С парнем у нас всё идеально, хотя в гороскепе написано что вообще близко не родня.
+								</div>
+								<a href="#" class="comment-b__reply">
+									<img src="img/icons/Chat.svg" alt="">
+									Ответить
+								</a>
+							</div>
+							<div class="comment-b">
+								<div class="comment-b__body">
+									<div class="comment-b__head">
+										<div class="comment-b__photo ibg">
+											<img src="img/photo/user-photo-2.jpg" alt="">
+										</div>
+										<div class="comment-b__wrap">
+											<div class="comment-b__name">Kristin Watson</div>
+											
+
+<div class="comment-b__rating rating-block">
+    <div class="rating-wrap">
+        <div class="rating ">
+            <div class="rating__line">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <div class="rating__activeline">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <input value="4" type="hidden" name="rating">
+            <div class="stars">
+                <span class="star"><i>Ужасно</i></span>
+                <span class="star"><i>Плохо</i></span>
+                <span class="star"><i>Нормально</i></span>
+                <span class="star"><i>Хорошо</i></span>
+                <span class="star"><i>Отлично</i></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="rating-value">5/5</div>
+    
+</div>
+										</div>
+										<div class="comment-b__date">01.02. 2021</div>
+									</div>
+									<div class="comment-b__text">
+										Ну не знаю . В это как то не особо верится. На практике увидела что не всё так как в таких гороскопах. С парнем у нас всё идеально, хотя в гороскепе написано что вообще близко не родня.
+									</div>
+									<a href="#" class="comment-b__reply">
+										<img src="img/icons/Chat.svg" alt="">
+										Ответить
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="comment-b">
+						<div class="comment-b__body">
+							<div class="comment-b__head">
+								<div class="comment-b__photo ibg">
+									<img src="img/photo/user-photo-2.jpg" alt="">
+								</div>
+								<div class="comment-b__wrap">
+									<div class="comment-b__name">Kristin Watson</div>
+									
+
+<div class="comment-b__rating rating-block">
+    <div class="rating-wrap">
+        <div class="rating ">
+            <div class="rating__line">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <div class="rating__activeline">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <input value="4" type="hidden" name="rating">
+            <div class="stars">
+                <span class="star"><i>Ужасно</i></span>
+                <span class="star"><i>Плохо</i></span>
+                <span class="star"><i>Нормально</i></span>
+                <span class="star"><i>Хорошо</i></span>
+                <span class="star"><i>Отлично</i></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="rating-value">5/5</div>
+    
+</div>
+								</div>
+								<div class="comment-b__date">01.02. 2021</div>
+							</div>
+							<div class="comment-b__text">
+								Ну не знаю . В это как то не особо верится. На практике увидела что не всё так как в таких гороскопах. С парнем у нас всё идеально, хотя в гороскепе написано что вообще близко не родня.
+							</div>
+							<a href="#" class="comment-b__reply">
+								<img src="img/icons/Chat.svg" alt="">
+								Ответить
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="anime-bg-box add-comment-form">
+					<div class="anime-bg-box__bg">
+						<span></span>
+						<div class="anime-bg-box__bg-l"></div>
+					</div>
+					<div class="anime-bg-box__body add-comment-form__body">
+						<form action="#" class="h-form">
+							<h3 class="add-comment-form__title title-3">Добавить комментарий</h3>
+							<div class="add-comment-form__items">
+								<div class="h-form__item">
+									<div class="h-form__label">Ваше имя</div>
+									<input type="text" class="input">
+								</div>
+								<div class="h-form__item">
+									<div class="h-form__label">Ваш e-mail</div>
+									<input type="text" class="input">
+								</div>
+								<div class="h-form__item full-width">
+									<div class="h-form__label">Ваш комментарий</div>
+									<textarea class="textarea"></textarea>
+								</div>
+
+							</div>
+							<div class="add-comment-form__bottom">
+								<div class="checkbox-wrap">
+									<label class="checkbox">
+										<input class="checkbox" type="checkbox" checked>
+										<div class="checkbox__square-active">
+											<img class="img-svg" src="img/icons/check-square.svg" alt="">
+										</div>
+										<div class="checkbox__text">Согласен на обработку персональных данных</div>
+									</label>
+								</div>
+								<button type="submit" class="h-form__submit btn-default"><span>Узнать совместимость</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+	<!-- == FOOTER ================== -->
+	<footer class="footer">
+    <div class="container">
+
+
+        <div class="footer__row-1">
+            <a href="#" class="footer__link">
+                Таблица совместимости по знакам
+            </a>
+            <div class="footer__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+            </div>
+            <a href="#" class="footer__link">
+                Политика конфиденциальности
+            </a>
+        </div>
+    </div>
+    <div class="footer__row-2">
+        <div class="container">
+            <div class="footer__flex-wrap ">
+                <div class="footer__text">
+                    Проект sex-positions не оказывает коммерческих услуг для физических лиц. Предложения размещенные на
+                    сайте не являются офертой. Конечные условия уточняйте на сайте производителей, сервисов, учебных и
+                    торговых организациях. Сайт предназначен для граждан старше 18 лет. Зарегистрированный оператор
+                    персональных данных №54-20-005100.
+                </div>
+                <div class="footer__label">
+                    <img src="img/icons/age.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+	<!-- == // FOOTER ================== -->
+
+</body>
+
+
+</html>

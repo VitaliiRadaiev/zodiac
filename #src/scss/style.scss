@@ -352,6 +352,12 @@ button.btn-default {
 	& h2 {
 	}
 	& h3 {
+		font-family: $titleFontFamily;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 1.5em;
+		margin-bottom: 0.5em;
+		color: $textColor;
 	}
 	& h4 {
 	}
@@ -395,5 +401,6 @@ button.btn-default {
 // ==== PAGES =====================================================
 @import "pages/home";
 @import "pages/single-zodiac";
+@import "pages/comparison";
 
 // ==== AND PAGES =====================================================
