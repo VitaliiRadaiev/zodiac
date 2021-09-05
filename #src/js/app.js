@@ -34,6 +34,7 @@ window.addEventListener('load', function () {
 	@@include('../common/rating/rating.js');
 	@@include('../common/diagram-info/diagram-info.js');
 	@@include('../common/sidebar-list/sidebar-list.js');
+	@@include('../common/anime-bg-box/anime-bg-box.js');
 
 	@@include('_function.js');
 });
